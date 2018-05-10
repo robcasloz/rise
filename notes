@@ -1,0 +1,4 @@
+- Check Uops each port
+    - Find Uop with least port alternativy
+    - Get cardinality of port alternatives
+    - Multiply cardinality with reciprocal throughput
