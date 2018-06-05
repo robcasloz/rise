@@ -1,0 +1,19 @@
+Throughputs:
+    ☐ Calculate throughput correctly
+        -Given default prefix of ports, this should be calculated something like cardinality(largest
+            port group) * reciprocal througput
+    ☐ Take care of edge-cases
+        ☐ Make sure numerical prefixes are calculated correctly
+            -This should be done by doing something like cardinality(largest port group)/prefix *
+                reciprocal throughput
+        ☐ Manually handle prefixes other than 'p' or numerical
+    ☐ Map names of instructions to LLVM-names for easier integration later 
+    ☐ Consider missing fields
+        ☐ No reciprocal throughput
+        ☐ NO ports defined
+
+Latencies:
+    ☐ Integrate the google-compiler-teams researched latencies into the llvm codebase
+        -This should probably be done in the *.td files, but check with Mats or Roberto first as
+            they might know better
+
