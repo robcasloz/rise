@@ -1,19 +1,34 @@
+Left-off:
+    ☐ Make sure that the reg-ex matchings are working proparly
+
 Throughputs:
     ☐ Calculate throughput correctly
-        -Given default prefix of ports, this should be calculated something like cardinality(largest
-            port group) * reciprocal througput
+        -Given default prefix of ports, this should be calculated something like cardinality(largest port group) * reciprocal througput
     ☐ Take care of edge-cases
         ☐ Make sure numerical prefixes are calculated correctly
-            -This should be done by doing something like cardinality(largest port group)/prefix *
-                reciprocal throughput
-        ☐ Manually handle prefixes other than 'p' or numerical
+            -This should be done by doing something like cardinality(largest port group)/prefix * reciprocal throughput
+        ✔ Manually handle prefixes other than 'p' or numerical @done(2018-06-07 17:04) @project(Throughputs)
+            -Note that there are no other prefixes other than p or numerics, this was a missunderstanding due to som of the fields containing words such as "none counted"
     ☐ Map names of instructions to LLVM-names for easier integration later 
     ☐ Consider missing fields
         ☐ No reciprocal throughput
-        ☐ NO ports defined
+        ☐ No ports defined
+            -Right now we catch instructions that have no ports defined, but still have a througput, might have to as Mats about these, but probably these will be included in the model, but hold no resources when sheduled.
+    ☐ Integrate the throughputs in the Unison codebase
+        -We will need to try and automatically map the instructions to LLVM names to do this automatically.          
+        -This should probably be done in the *.td files, but check with Mats or Roberto first as they might know better
+        -If included in *.td, the parser Roberto wrote which converts it into .yaml probably needs to be customized.
+    ☐ Remove all instructions that are 32-bit execution mode
+        -Not sure if this is needed, as we get it for free. Instructions were to focus on 64 bit.
+            -This needs to be taken into consideration when mapping instructions to their LLVM names, so we dont accidently map a 32-bit instruction to a 64-bit name.
+    ☐ Make sure that if we find a load/store match for the port-usage, we define the resource usage separately for those ports.
+        -Patterns that perform load/stores are,
+            -p237 - STA
+            -p23 - LD
+            -p4 - STD
+        -These probably hold a single resource for a single cycle
 
 Latencies:
     ☐ Integrate the google-compiler-teams researched latencies into the llvm codebase
-        -This should probably be done in the *.td files, but check with Mats or Roberto first as
-            they might know better
+        -This should probably be done in the *.td files, but check with Mats or Roberto first as they might know better
 
