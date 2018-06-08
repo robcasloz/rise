@@ -4,15 +4,18 @@ Left-off:
 Throughputs:
     ☐ Calculate throughput correctly
         -Given default prefix of ports, this should be calculated something like cardinality(largest port group) * reciprocal througput
+    ☐ Correctly calculate largest cardinality
+        -We need to take into account to not include the ports that are used for load/store when searching for largest cardinality.
     ☐ Take care of edge-cases
         ☐ Make sure numerical prefixes are calculated correctly
             -This should be done by doing something like cardinality(largest port group)/prefix * reciprocal throughput
+        ☐ Reciprocal throughput includes characters as "<, ~, n", etc. These need to be cared for
         ✔ Manually handle prefixes other than 'p' or numerical @done(2018-06-07 17:04) @project(Throughputs)
-            -Note that there are no other prefixes other than p or numerics, this was a missunderstanding due to som of the fields containing words such as "none counted"
+            -Note that there are no other prefixes other than p or numerics, this was a missunderstanding due to som of the fields containing words such as "none counted". These are caught during the RegEx check.
     ☐ Map names of instructions to LLVM-names for easier integration later 
-    ☐ Consider missing fields
-        ☐ No reciprocal throughput
-        ☐ No ports defined
+    ✔ Consider missing fields @done(2018-06-08 11:19) @project(Throughputs)
+        ✔ No reciprocal throughput @done(2018-06-08 11:19) @project(Throughputs)
+        ✔ No ports defined @done(2018-06-08 11:19) @project(Throughputs)
             -Right now we catch instructions that have no ports defined, but still have a througput, might have to as Mats about these, but probably these will be included in the model, but hold no resources when sheduled.
     ☐ Integrate the throughputs in the Unison codebase
         -We will need to try and automatically map the instructions to LLVM names to do this automatically.          
@@ -31,4 +34,12 @@ Throughputs:
 Latencies:
     ☐ Integrate the google-compiler-teams researched latencies into the llvm codebase
         -This should probably be done in the *.td files, but check with Mats or Roberto first as they might know better
+
+Misc:
+    ☐ Get all unique collections of ports which represents resources in the processor
+    ☐ Create a DAG for the resources
+
+Refactoring:
+    ☐ Rename variables to portsGroup, splitPortsGroup, ports, port to keep it consistent
+    ☐ Make use of a function that removes numerical prefix from ports
 
