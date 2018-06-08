@@ -29,8 +29,11 @@ def parser(data):
 
         #Check for non-null
         if uOps:
+            #Check that ports are correctly defined according to RegEx
+            temp = str(isPortDefined(str(uOps)))
             if str(isPortDefined(str(uOps))) == "None":
                 print("None: " + "\"" + uOps + "\"")
+                print("Temp: " + temp)
             
             # print (str(uOps))
             isPortDefined(str(uOps))
@@ -94,7 +97,7 @@ def largestCardinality (ports, instruction):
             if largestCard < len(purgeP[1]):
                 largestCard = len(purgeP[1])
             # else:
-                # raise Exception("Ports used by Uops are incorrectly defined for instruction: " + instruction)
+                # raise {0,1}Exception("Ports used by Uops are incorrectly defined for instruction: " + instruction)
 
     return largestCard
 
@@ -107,8 +110,9 @@ def removeDuplicateEntries(listString):
 #Check if a given instructions ports are defined
 def isPortDefined(ports):
     #Regular expression for prefix_opt-'p'-ports-opt_whitespace, all repeated at least once
-    regEx = re.compile('([\d]*[p][\d]+([\s{0,1}]))+')
-    print(regEx.match(str(ports)))
+    regEx = re.compile('([\d]*[p][\d]+[\s]{0,1})+')
+    match = regEx.match(ports)
+    return match
 
 #Check if parameter is a number
 def isNumber(a):
