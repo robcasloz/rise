@@ -27,7 +27,7 @@ def parser(data):
         resourceUsage = []
 
         #Check if rec. thro. is none here, its needed later in calculations
-        if reciprocalThroughput is None:
+        if reciprocalThroughput is None or not (isNumber(reciprocalThroughput)):
             noRecThro += str(instruction) + "\n"
             continue
 
@@ -40,34 +40,22 @@ def parser(data):
             #Deal with load/store instructions and remove them from the splitUOps
             for ports in list(splitUOps):
                 if isLoadStore(ports):  
-                    resources += str(ports) + " - 1 - " + "1, " 
+                    resourceUsage = getPrefix(ports)
+                    resources += str(ports) + " - " + str(resourceUsage) + "  - " + "1, " 
                     splitUOps.remove(ports)
 
-            #Check largest cardinality of ports
-            if(splitUOps):
-                cardinality = largestCardinality(splitUOps)
-                print("UOps :" + str(splitUOps))
-                print("Largest card:" + str(cardinality))
+            #Calculate remaining ports
+            if not (splitUOps is None):
+                for ports in splitUOps:
+                    cardinality = len(removePrefix(ports)) - 1
+                    resourceUsage = float((1 / float(reciprocalThroughput)) * cardinality / getPrefix(ports))
+                    resources += str(ports) + " - " + str(getPrefix(ports)) + "  - " + str(resourceUsage) + ", " 
 
-            #Make the throughput calculations
+            # #Make the throughput calculations
             # for ports in splitUOps:
-                # #Check if first character defines parallel ports on the form of "2p0156"
-                # prefix = ports[0]
-                # #Standard prefix
-                # if (prefix == 'p'):
-                    # #Instruction uses LD, STA, or STD (load/store Uop)
-                    # if ports == "p23" or ports == "p237" or ports == "p4":
-                    # #Instruction is not a load/store
-                    # # else:
-
-                # #Numerical prefix
-                # elif isNumber(prefix):
-                    # ports = ports[1:]
-                    # #cardinality = len(ports) - 1 / int(prefix)
-                # #Undefined prefix
-                # else:
-                    # undefPrefix += str(instruction) + "\n"
-
+                # resource += str(ports) + ""
+                
+                
         # Save all instructions without defined ports
         else:
             undefPorts += str(instruction) + "\n"
@@ -96,6 +84,17 @@ def largestCardinality (ports):
             largestCard = len(port) - 1
         
     return largestCard
+
+#Get the prefix from a group of ports
+def getPrefix(ports):
+    prefix = ports[0]
+    numPrefix = 0
+    while isNumber(prefix):
+        numPrefix = numPrefix * 10 + int(prefix)
+        ports = ports[1:]
+        prefix = ports[0]
+
+    return numPrefix if numPrefix != 0 else 1
 
 #Removes the numerical prefix (if existent) in front of ports
 def removePrefix(ports):
@@ -151,3 +150,4 @@ def isNumber(a):
 
 if __name__ == "__main__":
     main()
+
