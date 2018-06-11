@@ -44,10 +44,10 @@ def parser(data):
                     splitUOps.remove(ports)
 
             #Check largest cardinality of ports
-            # if(splitUOps):
-                # cardinality = largestCardinality(splitUOps)
-                # print("UOps :" + str(splitUOps))
-                # print("Largest card:" + str(cardinality))
+            if(splitUOps):
+                cardinality = largestCardinality(splitUOps)
+                print("UOps :" + str(splitUOps))
+                print("Largest card:" + str(cardinality))
 
             #Make the throughput calculations
             # for ports in splitUOps:
