@@ -1,10 +1,7 @@
-Left-off:
-    ☐ Make sure that the reg-ex matchings are working proparly
-
 Throughputs:
-    ☐ Calculate throughput correctly
+    ✔ Calculate throughput correctly @done(2018-06-11 16:40) @project(Throughputs)
         -Given default prefix of ports, this should be calculated something like cardinality(largest port group) * reciprocal througput
-    ☐ Correctly calculate largest cardinality
+    ✔ Correctly calculate largest cardinality @done(2018-06-11 11:26) @project(Throughputs)
         -We need to take into account to not include the ports that are used for load/store when searching for largest cardinality.
     ☐ Take care of edge-cases
         ☐ Make sure numerical prefixes are calculated correctly
@@ -24,7 +21,7 @@ Throughputs:
     ☐ Remove all instructions that are 32-bit execution mode
         -Not sure if this is needed, as we get it for free. Instructions were to focus on 64 bit.
             -This needs to be taken into consideration when mapping instructions to their LLVM names, so we dont accidently map a 32-bit instruction to a 64-bit name.
-    ☐ Make sure that if we find a load/store match for the port-usage, we define the resource usage separately for those ports.
+    ✔ Make sure that if we find a load/store match for the port-usage, we define the resource usage separately for those ports. @done(2018-06-11 11:25) @project(Throughputs)
         -Patterns that perform load/stores are,
             -p237 - STA
             -p23 - LD
@@ -36,10 +33,14 @@ Latencies:
         -This should probably be done in the *.td files, but check with Mats or Roberto first as they might know better
 
 Misc:
-    ☐ Get all unique collections of ports which represents resources in the processor
-    ☐ Create a DAG for the resources
+    ✔ Get all unique collections of ports which represents resources in the processor @done(2018-06-11 16:39) @project(Misc)
+    ✔ Create a DAG for the resources @done(2018-06-11 16:38) @project(Misc)
 
 Refactoring:
     ☐ Rename variables to portsGroup, splitPortsGroup, ports, port to keep it consistent
     ☐ Make use of a function that removes numerical prefix from ports
+    ☐ Handle all instruction as a list, instead of a string separated by newlines
+    ☐ Remake "isPortDefined" to return true/false instead
+        -Make check if length of match is the same as the length of string passed into the function
+        -Probably rename this function to follow above refactoring as well
 
