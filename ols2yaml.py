@@ -34,28 +34,20 @@ def parser(data):
         #Check that ports are correctly defined according to custom RegEx
         match = isPortDefined(str(uOps))
         if (not (match is None)) and match.end() - match.start() == len(uOps):
-            # print("Temp: " + str(match))
-            
             splitUOps = uOps.split(' ')
             largestCard = 0
-                
-            print("splitUops: " + str(splitUOps))
-            print("splitUops len: " + str(len(splitUOps)))
             
             #Deal with load/store instructions and remove them from the splitUOps
-            iterations = 1
-            for ports in splitUOps:
-                print (iterations)
+            for ports in list(splitUOps):
                 if isLoadStore(ports):  
                     resources += str(ports) + " - 1 - " + "1, " 
-                    print("removing port: " + ports)
                     splitUOps.remove(ports)
 
             #Check largest cardinality of ports
-            if(splitUOps):
-                cardinality = largestCardinality(splitUOps)
-                print("UOps :" + str(splitUOps))
-                print("Largest card:" + str(cardinality))
+            # if(splitUOps):
+                # cardinality = largestCardinality(splitUOps)
+                # print("UOps :" + str(splitUOps))
+                # print("Largest card:" + str(cardinality))
 
             #Make the throughput calculations
             # for ports in splitUOps:
