@@ -13,7 +13,8 @@ def main():
 #Parse the .yaml file
 def parser(data):
     undefPorts = "Undefined ports: \n"
-    noRecThro = "No reciprocal throughput defined: \n"
+    noRecThro = "No reciprocal throughput: \n"
+    undefRecThro = "Reciprocal throughput is NaN: \n"
     incompleteList = "Inc. list: \n"
     resourceUsageList = "Instructions - Operands - [Resource - Resoure Usage - Hold-time] \n"
 
@@ -26,9 +27,13 @@ def parser(data):
         reciprocalThroughput = instruction['Reciprocal throughput']
         resourceUsage = []
 
-        #Check if rec. thro. is none here, its needed later in calculations
-        if reciprocalThroughput is None or not (isNumber(reciprocalThroughput)):
+        #Check if rec. thro. is none, its needed later in calculations
+        if reciprocalThroughput is None:
             noRecThro += str(instruction) + "\n"
+            continue
+        #Rec. thro. is defined, but NaN
+        if not (isNumber(reciprocalThroughput)):
+            undefRecThro += str(instruction) + "\n"
             continue
 
         #Check that ports are correctly defined according to custom RegEx
@@ -48,13 +53,8 @@ def parser(data):
             if not (splitUOps is None):
                 for ports in splitUOps:
                     cardinality = len(removePrefix(ports)) - 1
-                    resourceUsage = float((1 / float(reciprocalThroughput)) * cardinality / getPrefix(ports))
+                    resourceUsage = float((float(reciprocalThroughput)) * cardinality / getPrefix(ports))
                     resources += str(ports) + " - " + str(getPrefix(ports)) + "  - " + str(resourceUsage) + ", " 
-
-            # #Make the throughput calculations
-            # for ports in splitUOps:
-                # resource += str(ports) + ""
-                
                 
         # Save all instructions without defined ports
         else:
@@ -70,7 +70,7 @@ def parser(data):
     noRecThro = removeDuplicateEntries(noRecThro)
 
     #Print the list
-    print (resourceUsageList + undefPorts + noRecThro)
+    print (resourceUsageList + undefPorts + noRecThro + undefRecThro)
 
 #Find the largest cardinality in a string of port-definitions
 def largestCardinality (ports):
