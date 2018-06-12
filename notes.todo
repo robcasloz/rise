@@ -27,6 +27,10 @@ Throughputs:
             -p23 - LD
             -p4 - STD
         -These probably hold a single resource for a single cycle
+    ☐ There are instructions that have a larger prefix than cardinality
+        - Example: 2p5, this screws up the calculations as we cant hold 2 of resource p5, as its resource value is just one.
+        - Idea: Can this be fixed by just equating the prefix with the cardinality?
+            - This is probably the solution, as other solutions would be harder to implement
 
 Latencies:
     ☐ Integrate the google-compiler-teams researched latencies into the llvm codebase
