@@ -12,16 +12,23 @@ def main():
     dagGraph = []
 
     subSets = []
+    #Iterate over all pairs of resources
     for resource1 in resources:
-        resource = [resource1, len(removePrefix(resource1)[1:]), []]
+
+        resource = {
+                'Instruction' : resource1,
+                'Resources' : len(removePrefix(resource1)[1:]),
+                'Supersets' : []
+                }
+
         for resource2 in resources:
-            #Check if subset
+            #Check if strict subset, this makes resources not point to themselves
             if set(resource1[1:]) < set(resource2[1:]):
-                resource[2].append(resource2)
+                resource['Supersets'].append(resource2)
 
         dagGraph.append(resource)
 
-    print(dagGraph)
+    print(yaml.dump(dagGraph))
 
 
 
