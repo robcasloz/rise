@@ -15,8 +15,10 @@ def main():
     #Iterate over all pairs of resources
     for resource1 in resources:
 
+        print(resource1)
+
         resource = {
-                'Instruction' : resource1,
+                'Resource' : resource1,
                 'Resources' : len(removePrefix(resource1)[1:]),
                 'Supersets' : []
                 }
@@ -28,7 +30,7 @@ def main():
 
         dagGraph.append(resource)
 
-    print(yaml.dump(dagGraph))
+    print(yaml.dump(dagGraph, default_flow_style=False))
 
 
 

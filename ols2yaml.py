@@ -16,16 +16,23 @@ def parser(data):
     noRecThro = "No reciprocal throughput: \n"
     undefRecThro = "Reciprocal throughput is NaN: \n"
     incompleteList = "Inc. list: \n"
-    resourceUsageList = "Instructions - Operands - [Resource - Resoure Usage - Hold-time] \n"
+    resourceUsageList = []
+
 
     # Print instruction names
     for instruction in data:
 
-        resources = str(instruction['Instruction']) + " - " + str(instruction['Operands']) + " - " + "["
+        if instruction['Instruction'] is not None:
+            tempInstruction = instruction['Instruction'].replace("\n", " ")
+
+        resources = {
+                'Instruction' : tempInstruction,
+                'Operands' : instruction['Operands'],
+                'Resources' : []
+                }
 
         uOps = instruction['Uops each port']
         reciprocalThroughput = instruction['Reciprocal throughput']
-        resourceUsage = []
 
         #Check if rec. thro. is none, its needed later in calculations
         if reciprocalThroughput is None:
@@ -45,8 +52,12 @@ def parser(data):
             #Deal with load/store instructions and remove them from the splitUOps
             for ports in list(splitUOps):
                 if isLoadStore(ports):  
-                    resourceUsage = getPrefix(ports)
-                    resources += str(ports) + " - " + str(resourceUsage) + "  - " + "1, " 
+                    resource = {
+                            'Resource': removePrefix(ports), 
+                            'ResourceUsage': getPrefix(ports),
+                            'HoldTime': 1
+                            }
+                    resources['Resources'].append(resource)
                     splitUOps.remove(ports)
 
             #Calculate remaining ports
@@ -54,23 +65,28 @@ def parser(data):
                 for ports in splitUOps:
                     cardinality = len(removePrefix(ports)) - 1
                     resourceUsage = float((float(reciprocalThroughput)) * cardinality / getPrefix(ports))
-                    resources += str(ports) + " - " + str(getPrefix(ports)) + "  - " + str(resourceUsage) + ", " 
-                
+                    resource = {
+                            'Resource': removePrefix(ports), 
+                            'ResourceUsage': getPrefix(ports),
+                            'HoldTime': resourceUsage
+                            }
+                    resources['Resources'].append(resource)
         # Save all instructions without defined ports
         else:
             undefPorts += str(instruction) + "\n"
 
         #Save undefined ports and instructions without througput
 
-        resourceUsageList += resources[:-2] + "]" "\n"
-
+        resourceUsageList.append(resources)
 
     #Some instructions are added twice to some lists, as they brake the same rule twice. Thus we remove all duplicate entries in all lists.
     undefPorts = removeDuplicateEntries(undefPorts)
     noRecThro = removeDuplicateEntries(noRecThro)
 
     #Print the list
-    print (resourceUsageList + undefPorts + noRecThro + undefRecThro)
+    print (yaml.dump(resourceUsageList, default_flow_style=False))
+    print (undefPorts + noRecThro)
+    print(undefRecThro)
 
 #Find the largest cardinality in a string of port-definitions
 def largestCardinality (ports):
