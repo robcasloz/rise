@@ -1,0 +1,35 @@
+Monday morning: Read this shit!!!
+    - https://github.com/llvm-mirror/llvm/blob/master/include/llvm/Target/TargetSchedule.td
+
+Througput calculation: 1/rec.throu. * cardinality/prefix
+    - I think this is wrong! We should not invert rec. throu. thus correct:
+        rec.throu. * card/prefix
+
+Question, do we calculate the cardinality for each one?
+    - This is probably the best option
+    - The ports with lowest cardinality/prefix is the most constrained ports, and have a higher probability of being the bottleneck.
+
+TODO: Resource usage should equal the prefix on load/store instructions as well as regular instructions
+    -Should probably talk to Mats about this, I think he said that we should use best-case calculations
+
+Resource usage definition:
+Instructions - Operands - [Resource - Resoure Usage - Hold-time]
+
+Load/store combos:
+LD  - p23
+STA - p237
+STD - p4
+
+
+Vart ska informationen in?
+    - specsgen/input?
+
+LLVM- RESOURCE MODEL
+    - Instructions are gathered in "SKLWriteResGroup" which define what ports are used, latency, and how many microOps goes into what port
+    - IDEA: Use the LLVM resource model, but customize it to include the hold times that we have calculated from Agner's research.
+        - Make the cusomization optional, so research can be done in how the scheduled instructions would differ.
+        - Check if we can get access to Robertos TableGen backend, so we dont have to rewrit the wheel.
+            - If not possible: Parse file using python, and then insert necessary information into the .yaml files used by specsgen.
+            - Customization of specsgen is probably also necessary to use the information given in the yaml file
+            - We could check with mats if itineraries are used for anything else, or if we can perhaps make itineraries from the class files in the .td file
+    
