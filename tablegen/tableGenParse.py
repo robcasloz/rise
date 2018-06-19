@@ -69,5 +69,7 @@ def instructionMatching (instructions, regexList):
         if not matched:
             matchings['Unmatched'].append(instruction)
 
+    return matchings
+
 if __name__ == '__main__':
     main()
