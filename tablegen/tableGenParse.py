@@ -6,6 +6,13 @@ import pyparsing as pp
 #Separate file with a list containing all x86 instructions defined for unison
 from unison_instructions import unisonInstructions
 
+#Transform string of unison instructions to a list of strings with individual instructions
+instructions = unisonInstructions.replace("\n", '')
+instructions = instructions.replace("\t", '')
+instructions = instructions.replace(" ", '')
+instructions = instructions.split(",")
+print (instructions)
+
 writeResGroup = pp.Word(pp.alphanums)
 instRegex = pp.SkipTo("\"")
 
@@ -33,7 +40,7 @@ for SKLWriteResGroup in sKLWriteResGroupDef.searchString(open('X86SchedSkylakeCl
 for instrGroup in instrGroupDef.searchString(open('X86SchedSkylakeClient.td').read()):
     instructions.append(instrGroup.asDict())
 
-print (unison_instructions)
+# print (unison_instructions)
 # print ("Skylake WriteResGroups: ")
 # print (yaml.dump(SKLWriteResGroups, default_flow_style = False))
 # print ("Skylake instructions: ")

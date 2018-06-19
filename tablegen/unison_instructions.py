@@ -1,4 +1,4 @@
-unisonInstructions = [AAA, AAD8i8, AAM8i8, AAS, ACQUIRE_MOV16rm, ACQUIRE_MOV32rm,
+unisonInstructions = """AAA, AAD8i8, AAM8i8, AAS, ACQUIRE_MOV16rm, ACQUIRE_MOV32rm,
      ACQUIRE_MOV64rm, ACQUIRE_MOV8rm, ADC16i16, ADC16mi, ADC16mi8,
      ADC16mr, ADC16ri, ADC16ri8, ADC16rm, ADC16rr, ADC16rr_REV,
      ADC32i32, ADC32mi, ADC32mi8, ADC32mr, ADC32ri, ADC32ri8, ADC32rm,
@@ -809,4 +809,5 @@ unisonInstructions = [AAA, AAD8i8, AAM8i8, AAS, ACQUIRE_MOV16rm, ACQUIRE_MOV32rm
      V_SETALLONES_remat, AVX_SET0_source, AVX_SET0_demat,
      AVX_SET0_remat, AVX2_SETALLONES_source, AVX2_SETALLONES_demat,
      AVX2_SETALLONES_remat, FsFLD0SS_source, FsFLD0SS_demat,
-     FsFLD0SS_remat, FsFLD0SD_source, FsFLD0SD_demat, FsFLD0SD_remat]
+     FsFLD0SS_remat, FsFLD0SD_source, FsFLD0SD_demat, FsFLD0SD_remat"""
+     
