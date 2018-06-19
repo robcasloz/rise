@@ -48,7 +48,11 @@ def main():
 
     #Match instructions and regex
     matchings = instructionMatching(uniInstr, regexList)
-    print(matchings)
+    print("Matchings:")
+    print(matchings['Matched'])
+
+    print("Unmatched instructions:")
+    print(matchings['Unmatched'])
 
 
 #Find out if there are any instructions not matched to the instructions defined in unison
@@ -63,8 +67,12 @@ def instructionMatching (instructions, regexList):
         for regex in regexList:
             searchResult = re.search(regex, instruction) 
             if searchResult is (not None):
+                matching = {
+                        'Instruction' : instruction,
+                        'Regex' : regex
+                        }
                 matched = True
-                matchings['Matched'].append(instruction)
+                matchings['Matched'].append(matching)
 
         if not matched:
             matchings['Unmatched'].append(instruction)
