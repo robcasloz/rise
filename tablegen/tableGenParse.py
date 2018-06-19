@@ -46,6 +46,8 @@ def main():
     for instruction in instructions:
         regexList.append(instruction['Regex'])
 
+    # print(regexList)
+
     #Match instructions and regex
     matchings = instructionMatching(uniInstr, regexList)
     print("Matchings:")
@@ -65,12 +67,18 @@ def instructionMatching (instructions, regexList):
     for instruction in instructions:
         matched = False
         for regex in regexList:
+            #If we find a matching, we should move onto the next instruction
+            if matched:
+                continue;
+
             searchResult = re.search(regex, instruction) 
-            if searchResult is (not None):
+
+            if searchResult is not None:
                 matching = {
                         'Instruction' : instruction,
                         'Regex' : regex
                         }
+
                 matched = True
                 matchings['Matched'].append(matching)
 
@@ -81,3 +89,4 @@ def instructionMatching (instructions, regexList):
 
 if __name__ == '__main__':
     main()
+
