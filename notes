@@ -1,30 +1,5 @@
-Monday morning: Read this shit!!!
+Great resource for Aly
     - https://github.com/llvm-mirror/llvm/blob/master/include/llvm/Target/TargetSchedule.td
-
-Througput calculation: 1/rec.throu. * cardinality/prefix
-    - I think this is wrong! We should not invert rec. throu. thus correct:
-        rec.throu. * card/prefix
-
-Question, do we calculate the cardinality for each one?
-    - This is probably the best option
-    - The ports with lowest cardinality/prefix is the most constrained ports, and have a higher probability of being the bottleneck.
-
-TODO: Resource usage should equal the prefix on load/store instructions as well as regular instructions
-    -Should probably talk to Mats about this, I think he said that we should use best-case calculations
-
-Resource usage definition:
-Instructions - Operands - [Resource - Resoure Usage - Hold-time]
-
-Load/store combos:
-LD  - p23
-STA - p237
-STD - p4
-
-Duplicate instruction: PUSH32r
-
-
-Vart ska informationen in?
-    - specsgen/input?
 
 LLVM- RESOURCE MODEL
     - Instructions are gathered in "SKLWriteResGroup" which define what ports are used, latency, and how many microOps goes into what port
@@ -35,3 +10,11 @@ LLVM- RESOURCE MODEL
             - Customization of specsgen is probably also necessary to use the information given in the yaml file
             - We could check with mats if itineraries are used for anything else, or if we can perhaps make itineraries from the class files in the .td file
     
+    - Some instructions are pseudo/macro instructions. These are then expanded to real instructions. It seems right now that the unmatced instructions are the ones expanded from macjos, so we should look into the LLVM codebase to find their translations since they also need to have their resources defined.
+        - Example from Mats: ".ex. expanderas FsFLD0SD (NoItinerary) till FsXORPDrr (IIC_SSE_BIT_P_RR), så i resursmodellen bör de vara ekvivalenta."
+        - It may well be that instructions expanded from macros are covered by the definitions at the top of the skylake sched .td file
+        - It may be that a macro instruction actually expands to several combined instructions.
+            - Example, mov256 -> mov-low-128 and mov-high-128, thus mov256 is not a valid instruction, but simply an abstraction of several combined instructions
+        - This seems to be a good resource for finding tranlations https://github.com/llvm-mirror/llvm/blob/68d73644cd5908c269d3c4419139ab2e6a85f527/lib/Target/X86/X86ExpandPseudo.cpp
+        - Mats proposed that the macro-instructions might have the attribute "NoItinerary" in the x86.yaml file. Currently there are 1461 of these, and there are 1848 unmatched instructions
+
