@@ -20,6 +20,8 @@ LD  - p23
 STA - p237
 STD - p4
 
+Duplicate instruction: PUSH32r
+
 
 Vart ska informationen in?
     - specsgen/input?

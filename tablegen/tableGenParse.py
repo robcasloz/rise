@@ -3,6 +3,7 @@
 import yaml
 import pyparsing as pp
 import re
+import time
 
 #Separate file with a list containing all x86 instructions defined for unison
 from unison_instructions import unisonInstructions
@@ -40,6 +41,8 @@ def main():
     for instrGroup in instrGroupDef.searchString(open('X86SchedSkylakeClient.td').read()):
         instructions.append(instrGroup.asDict())
 
+    # print(yaml.dump(SKLWriteResGroups, default_flow_style=False))
+    # print(yaml.dump(instructions, default_flow_style=False))
 
     #Extract all regex
     regexList = []
@@ -48,45 +51,76 @@ def main():
 
     # print(regexList)
 
-    #Match instructions and regex
+    # Match instructions and regex
     matchings = instructionMatching(uniInstr, regexList)
     print("Matchings:")
-    print(matchings['Matched'])
+    print(yaml.dump(matchings['Matched'], default_flow_style=False))
 
     print("Unmatched instructions:")
-    print(matchings['Unmatched'])
+    print(yaml.dump(matchings['Unmatched'], default_flow_style=False))
+
+    print("Sizes:")
+    print("matched: " + str(len(matchings['Matched'])))
+    print("unmatched: " + str(len(matchings['Unmatched'])))
+    print("Total should be: " + str(len(uniInstr)))
 
 
-#Find out if there are any instructions not matched to the instructions defined in unison
+#Find out if there are any instructions not matched to the instructions defined in unison, this function is slow (O(n^2)) due to testing all combinations of both input lists, so alot of things are aimed at improving its speed
 def instructionMatching (instructions, regexList):
+    #Dictionary to save results
     matchings = {
             'Matched' :  [],
             'Unmatched' : []
             }
 
+    alNumRegex = []
+    noAlNumRegex = []
+    #Divide regex'es into those with just alphanumericals, as they dont contain any special rules and we can just perform regular string-matching
+    for regex in regexList:
+        if regex.isalnum():
+            alNumRegex.append(regex)
+        else:
+            noAlNumRegex.append(regex)
+
+    tempUnmatched = []
+    #See if we get an instant match before trying expensive regex
     for instruction in instructions:
+        if instruction in set(alNumRegex):
+            matching = {
+                'Instruction' : instruction,
+                'Regex' : instruction
+            }
+            matchings['Matched'].append(matching)
+
+        else:
+            tempUnmatched.append(instruction)
+
+    #Perform more expensive regex matching for instructions not found through string-matching
+    for instruction in tempUnmatched:
         matched = False
-        for regex in regexList:
-            #If we find a matching, we should move onto the next instruction
+        for regex in noAlNumRegex:
+            #Check if we already matched the instruction with an earlier regex
             if matched:
                 continue;
 
             searchResult = re.search(regex, instruction) 
-
-            if searchResult is not None:
+            #Check if we matched the whole instruction
+            if (not (searchResult is None) and searchResult.end() - searchResult.start() == len(instruction)):
                 matching = {
-                        'Instruction' : instruction,
-                        'Regex' : regex
-                        }
-
-                matched = True
+                    'Instruction' : instruction,
+                    'Regex' : regex
+                }
                 matchings['Matched'].append(matching)
-
+                matched = True
+        
         if not matched:
-            matchings['Unmatched'].append(instruction)
+            #Instruction wasnt matched with any regex
+            matchings['Unmatched'].append({'Instruction' : instruction})
 
     return matchings
 
 if __name__ == '__main__':
+    start_time = time.time()
     main()
+    print("--- %s seconds ---" % (time.time() - start_time))
 
