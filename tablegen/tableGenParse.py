@@ -18,41 +18,73 @@ def main():
 
     #Parser to find each regex-instructions that belongs to a SKLWriteResGroup
     writeResGroup = pp.Word(pp.alphanums)
-    instRegex = pp.SkipTo("\"")
-    instrGroupDef = pp.Suppress("def: InstRW<[") + writeResGroup("SKLWriteResGroup") + pp.Suppress("], (instregex \"") + instRegex("Regex") + pp.Suppress("\")>;")
+    regexDef = pp.SkipTo(">")
+    instrDef = pp.SkipTo(")")
+    #Regex
+    regexGroupDef = pp.Suppress("def: InstRW<[") + writeResGroup("SKLWriteResGroup") + pp.Suppress("], (instregex \"") + regexDef("Regex") + pp.Suppress(">;")
+    #Instructions
+    instrGroupDef = pp.Suppress("def: InstRW<[") + writeResGroup("SKLWriteResGroup") + pp.Suppress("], (instrs ") + instrDef("Instructions") + pp.Suppress(")>;")
 
     #Parser to find each SKLWriteResGroup definition
     ports = pp.SkipTo("]")
     latency = pp.Word(pp.nums)
     microOps = pp.Word(pp.nums)
     resourceCycles = pp.SkipTo("]")
-    sKLWriteResGroupDef = pp.Suppress("def ") + writeResGroup("SKLWriteResGroup") + pp.Suppress(": SchedWriteRes<[") + ports("Ports") + pp.Suppress(pp.restOfLine) + (
+    sKLWriteResGroupDef = pp.Suppress("def ") + writeResGroup("SKLWriteResGroup") + (
+            pp.Suppress(": SchedWriteRes<[") + ports("Ports") + pp.Suppress(pp.restOfLine) + 
             pp.Suppress("let Latency = ") + latency("Latency")  + pp.Suppress(pp.restOfLine) +
             pp.Suppress("let NumMicroOps = ") + microOps("NumMicroOps") + pp.Suppress(pp.restOfLine) + 
-            pp.Suppress("let ResourceCycles = [") + resourceCycles("ResourceCycles") + pp.Suppress(pp.restOfLine)
+            pp.Suppress("let ResourceCycles = [") + resourceCycles("ResourceCycles") + 
+            pp.Suppress(pp.restOfLine)
         )
 
     SKLWriteResGroups = []
     instructions = []
+    regularExpressions = []
 
+    #Find all WriteResGroup definitions
     for SKLWriteResGroup in sKLWriteResGroupDef.searchString(open('X86SchedSkylakeClient.td').read()):
         SKLWriteResGroups.append(SKLWriteResGroup.asDict())
 
+    #Find all regular expressions
+    for regexGroup in regexGroupDef.searchString(open('X86SchedSkylakeClient.td').read()):
+        regularExpressions.append(regexGroup.asDict())
+
+    #Find all regular expressions
     for instrGroup in instrGroupDef.searchString(open('X86SchedSkylakeClient.td').read()):
         instructions.append(instrGroup.asDict())
 
+    #Format instruction-list
+    for instruction in instructions:
+        instruction['Instructions'] = instruction['Instructions'].replace('\n', '')
+        instruction['Instructions'] = instruction['Instructions'].replace(' ', '')
+        instruction['Instructions'] = instruction['Instructions'].split(',')
+
+
+    #Format regex-list
+    for regex in regularExpressions:
+        regex['Regex'] = regex['Regex'].replace('\n', '')
+        regex['Regex'] = regex['Regex'].replace(' ', '')
+        regex['Regex'] = regex['Regex'].replace('\'', '')
+        regex['Regex'] = regex['Regex'].replace('\"', '')
+        regex['Regex'] = regex['Regex'][:-1]
+        regex['Regex'] = regex['Regex'].split(',')
+
     # print(yaml.dump(SKLWriteResGroups, default_flow_style=False))
     # print(yaml.dump(instructions, default_flow_style=False))
+    # print(yaml.dump(regularExpressions, default_flow_style=False))
 
-    #Extract all regex
-    regexList = []
+    # Gather instructions
+    tempInstr = []
     for instruction in instructions:
-        regexList.append(instruction['Regex'])
+        tempInstr.extend(instruction['Instructions'])
 
-    # print(regexList)
+    tempRegex = []
+    for regex in regularExpressions:
+        tempRegex.extend(regex['Regex'])
 
     # Match instructions and regex
-    matchings = instructionMatching(uniInstr, regexList)
+    matchings = instructionMatching(uniInstr, tempInstr, tempRegex)
     print("Matchings:")
     print(yaml.dump(matchings['Matched'], default_flow_style=False))
 
@@ -66,7 +98,7 @@ def main():
 
 
 #Find out if there are any instructions not matched to the instructions defined in unison, this function is slow (O(n^2)) due to testing all combinations of both input lists, so alot of things are aimed at improving its speed
-def instructionMatching (instructions, regexList):
+def instructionMatching (uniInstructions, llvmInstructions, regexList):
     #Dictionary to save results
     matchings = {
             'Matched' :  [],
@@ -75,17 +107,12 @@ def instructionMatching (instructions, regexList):
 
     alNumRegex = []
     noAlNumRegex = []
-    #Divide regex'es into those with just alphanumericals, as they dont contain any special rules and we can just perform regular string-matching
-    for regex in regexList:
-        if regex.isalnum():
-            alNumRegex.append(regex)
-        else:
-            noAlNumRegex.append(regex)
-
     tempUnmatched = []
+
     #See if we get an instant match before trying expensive regex
-    for instruction in instructions:
-        if instruction in set(alNumRegex):
+    llvmInstructionSet = set(llvmInstructions)
+    for instruction in uniInstructions:
+        if instruction in llvmInstructionSet:
             matching = {
                 'Instruction' : instruction,
                 'Regex' : instruction
@@ -98,7 +125,7 @@ def instructionMatching (instructions, regexList):
     #Perform more expensive regex matching for instructions not found through string-matching
     for instruction in tempUnmatched:
         matched = False
-        for regex in noAlNumRegex:
+        for regex in regexList:
             #Check if we already matched the instruction with an earlier regex
             if matched:
                 continue;
