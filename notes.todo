@@ -1,6 +1,23 @@
 LLVM extraction:
     ☐ Extract the instructions belonging to each "WriteResGroup"
         - Save in spreadsheet for easy extraction as *.csv later
+    ☐ For pseudo/macro-instruction mapping to regular instructions, check "relaxed opcodes"
+        - In some file, they map instructions to similar instructions in a
+        function called something like "GetRelaxedOpcode", we should check if
+        this is something that should be included, good idead is to check if
+        both versions of the instruction is defined already or not.
+    ✔ Look into if TableGen is a better way to go for this! @done(2018-06-27 17:28) @project(LLVM extraction)
+        - We can probably parse the output created from tablegen w/o using a specific backend.
+            - This is the right answer
+    ☐ Make the program accept either a file as argument or stdin
+    ☐ There is a bug where, if there for one defined instructions doesnt exist a defined SchedRW list, it parses until the next one which belongs to another instructions
+        - This could be fixed by telling the parser to either exptecting a
+        new instruction definition, in which case we throw away the
+        earlier one, or expect a SchedRW list.
+        - Look up the function ".find()" for strings, this will prob. be able
+        to parse the file much faster, and make it easier to solve this problem
+
+    
 
 
 
