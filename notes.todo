@@ -1,3 +1,11 @@
+LLVM extraction:
+    ☐ Extract the instructions belonging to each "WriteResGroup"
+        - Save in spreadsheet for easy extraction as *.csv later
+
+
+
+
+// All of this is put on hold for now, as we dont know how much it will actually be used right now
 Throughputs:
     ✔ Calculate throughput correctly @done(2018-06-11 16:40) @project(Throughputs)
         -Given default prefix of ports, this should be calculated something like cardinality(largest port group) * reciprocal througput
