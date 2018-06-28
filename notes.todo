@@ -1,7 +1,7 @@
 LLVM extraction:
-    ☐ Extract the instructions belonging to each "WriteResGroup"
+    ✘ Extract the instructions belonging to each "WriteResGroup" @cancelled(2018-06-28 10:01) @project(LLVM extraction)
         - Save in spreadsheet for easy extraction as *.csv later
-    ☐ For pseudo/macro-instruction mapping to regular instructions, check "relaxed opcodes"
+    ✘ For pseudo/macro-instruction mapping to regular instructions, check "relaxed opcodes" @cancelled(2018-06-28 10:01) @project(LLVM extraction)
         - In some file, they map instructions to similar instructions in a
         function called something like "GetRelaxedOpcode", we should check if
         this is something that should be included, good idead is to check if
@@ -16,6 +16,10 @@ LLVM extraction:
         earlier one, or expect a SchedRW list.
         - Look up the function ".find()" for strings, this will prob. be able
         to parse the file much faster, and make it easier to solve this problem
+        - Instructions have the prefix "def", using a small 'd' seems to be unique for the whole file
+        - SchedRW uses the prefix "list<SchedReadWrite> SchedRW"
+    ☐ Check if providing a backend in the command is necessary to get the desired output
+
 
     
 
