@@ -30,6 +30,19 @@ LLVM- RESOURCE MODEL
                 - Look for "WriteALU"
             - Search in x86 using "xxx path:/lib/Target/X86"
 
+    - SchedRW groups defined as
+        - WriteRes
+            - "def : WriteRes<NAME, [PORTS]>;"
+            - "def : WriteRes<NAME, [PORTS]>{
+                LATENCY
+                RESOURCECYCLES
+            }"
+        
+        - SKLWriteResPair
+            - "defm : SKLWriteResPair<NAME, PORTS, LATENCY>;"
+            - Instructions that fit into here are possible to use with folded loads
+
+
 Parsing Tablegen:
     - When running the python script that takes tablegen output as input, the tablegen command used should be "llvm-tblgen ~/Projects/llvm-6.0.0.src/lib/Target/X86/X86.td -InstrInfo -I ~/Projects/llvm-6.0.0.src/include -I ~/Projects/llvm-6.0.0.src/lib/Target/X86"
 
