@@ -811,3 +811,10 @@ unisonInstructions = """AAA, AAD8i8, AAM8i8, AAS, ACQUIRE_MOV16rm, ACQUIRE_MOV32
      AVX2_SETALLONES_remat, FsFLD0SS_source, FsFLD0SS_demat,
      FsFLD0SS_remat, FsFLD0SD_source, FsFLD0SD_demat, FsFLD0SD_remat"""
      
+def getUnisonInstructions():
+    #Transform string of unison instructions to a list of strings with individual instructions
+    uniInstr = unisonInstructions.replace("\n", '')
+    uniInstr = uniInstr.replace("\t", '')
+    uniInstr = uniInstr.replace(" ", '')
+    uniInstr = uniInstr.split(",")
+    return uniInstr
