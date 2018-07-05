@@ -22,13 +22,23 @@ LLVM extraction:
         to parse the file much faster, and make it easier to solve this problem
         - Instructions have the prefix "def", using a small 'd' seems to be unique for the whole file
         - SchedRW uses the prefix "list<SchedReadWrite> SchedRW"
+
     ✔ Check if providing a backend in the command is necessary to get the desired output @done(2018-06-28 16:28) @project(LLVM extraction)
-    ☐ Extract resource usage for each SchedRWGroup in skylake.td
+
+    ✔ Extract resource usage for each SchedRWGroup in skylake.td @done(2018-07-03 19:43) @project(LLVM extraction)
         -This is probably best done in the file that extracts regex from the same file, i.e. "schedSkylakeClient-parse.py"
     
     ☐ Map instructions not covered by regex to the resource usage that their schedRWGroup defines
+        -Just include for which instruction which shcedRWGroup it is part of, and then define the resource usages for each schedRWGroup, as is done with the already matched instructions, although they are matched with a "SKLWriteResGroupXX"
 
-    ☐ Output as .json instead of .yaml
+    ☐ Make sure the output in .json format is correrctly formated, the lists are nested as a single string now for example
+        -There are also integers being formated as strings
+
+    ✔ Output as .json instead of .yaml @done(2018-07-03 15:10) @project(LLVM extraction)
+
+    ☐ Also extract all the resources (defined port-groups) from the .td file automatically, and create a DAG from it, usefull in the future probably
+
+    ☐ Try to remove the schedRW inside the multiclass definition in the .td file from being parsed
 
 Documentation:
     

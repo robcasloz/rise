@@ -44,5 +44,6 @@ LLVM- RESOURCE MODEL
 
 
 Parsing Tablegen:
-    - When running the python script that takes tablegen output as input, the tablegen command used should be "llvm-tblgen ~/Projects/llvm-6.0.0.src/lib/Target/X86/X86.td -InstrInfo -I ~/Projects/llvm-6.0.0.src/include -I ~/Projects/llvm-6.0.0.src/lib/Target/X86"
+    - When running the python script that takes tablegen output as input(tablegenOutput-parse.py), the tablegen command used should be: 
+        "llvm-tblgen ~/Projects/llvm-6.0.0.src/lib/Target/X86/X86.td -InstrInfo -I ~/Projects/llvm-6.0.0.src/include -I ~/Projects/llvm-6.0.0.src/lib/Target/X86"
 
