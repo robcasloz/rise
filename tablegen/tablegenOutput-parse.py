@@ -1,16 +1,13 @@
 #!/usr/bin/env python
 
-import yaml
+import json
 import pyparsing as pp
 import sys
-
-#Separate file containing names of all instructions used in Unison
-from unison_instructions import unisonInstructions
 
 # Main
 def main():
     tablegenDefs = extractInstructions(readIn())
-    print(yaml.dump(tablegenDefs, default_flow_style=False))
+    print(json.dumps(tablegenDefs, indent=4))
 
 # Extract each instruction outputed by tablegen and its respective SchedRW definition
 def extractInstructions(tablegenDefs):
@@ -86,6 +83,7 @@ def readIn():
     #Find the defs from the output, which is all we want
     for line in inLines:
         line = line.strip('\n')
+        #Look for specific line, which signifies the start of definitions
         if (not defsReached) and (line.find("------------- Defs -----------------") >= 0):
             defsReached = True
         elif defsReached:
@@ -93,8 +91,6 @@ def readIn():
 
     return defs
     
-
-
 if __name__ == '__main__':
     main()
 
