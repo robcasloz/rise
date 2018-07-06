@@ -41,37 +41,39 @@ def main():
     #Find all instructions defined for skylake by llvm
     llvmInstructions = getLlvmInstructions(llvmInstructionParser, schedSkylakeClientTD)
 
+    print(json.dumps(writeResDefs + writeResVerboseDefs + sklWriteResPairDefs, indent=4))
+
     # Find out which unison instructions has a matching regular-expression defined in llvm .td
-    matchings = regexMatching(unisonInstructions, llvmInstructions)
+    # matchings = regexMatching(unisonInstructions, llvmInstructions)
 
-    #Open file that contains output from tablegen
-    instructionRWSchedGroupTuples = json.load(open('tablegenOutput-parsed.json'))
-    # Try and match all remaining instructions, that are not matched with any resource group, with what their schedRWGroups are defined as from the output of tablegen
-    schedRWMatchings = getSchedRWMatchings(matchings['Unmatched'], instructionRWSchedGroupTuples)
+    # #Open file that contains output from tablegen
+    # instructionRWSchedGroupTuples = json.load(open('tablegenOutput-parsed.json'))
+    # # Try and match all remaining instructions, that are not matched with any resource group, with what their schedRWGroups are defined as from the output of tablegen
+    # schedRWMatchings = getSchedRWMatchings(matchings['Unmatched'], instructionRWSchedGroupTuples)
         
-    #Save all defined resource groups
-    resourceGroups = []
-    for group in writeResDefs + writeResVerboseDefs + sklWriteResPairDefs:
-        resourceGroups.append(group['Name'])
+    # #Save all defined resource groups
+    # resourceGroups = []
+    # for group in writeResDefs + writeResVerboseDefs + sklWriteResPairDefs:
+        # resourceGroups.append(group['Name'])
 
-    #Remove undefined resourcegroups from each defined instruction
-    undefinedSchedRWGroup = []
-    for instruction in list(schedRWMatchings['Matched']):
-        tempInstruction = removeUndefinedResourceGroups(instruction, resourceGroups)
-        #Instruction had no defined resource group for skylake, so its resource usage is unedfined
-        if not tempInstruction['ResourceGroup']:
-            undefinedSchedRWGroup.append({'Instruction': tempInstruction['Instruction']})
-            schedRWMatchings['Matched'].remove(instruction)
-        else:
-            instruction = tempInstruction
+    # #Remove undefined resourcegroups from each defined instruction
+    # undefinedSchedRWGroup = []
+    # for instruction in list(schedRWMatchings['Matched']):
+        # tempInstruction = removeUndefinedResourceGroups(instruction, resourceGroups)
+        # #Instruction had no defined resource group for skylake, so its resource usage is unedfined
+        # if not tempInstruction['ResourceGroup']:
+            # undefinedSchedRWGroup.append({'Instruction': tempInstruction['Instruction']})
+            # schedRWMatchings['Matched'].remove(instruction)
+        # else:
+            # instruction = tempInstruction
 
-    #Format the output and print json (indent=4 enables pretty print)
-    output = {
-            'ResourceGroups': sklWriteResGroupDefs + writeResVerboseDefs + writeResDefs,
-            'DefinedInstructions': matchings['Matched'] + schedRWMatchings['Matched'],
-            'UndefinedInstructions': schedRWMatchings['Unmatched'] + undefinedSchedRWGroup,
-            }
-    print(json.dumps(output, indent=4))
+    # #Format the output and print json (indent=4 enables pretty print)
+    # output = {
+            # 'ResourceGroups': sklWriteResGroupDefs + writeResVerboseDefs + writeResDefs,
+            # 'DefinedInstructions': matchings['Matched'] + schedRWMatchings['Matched'],
+            # 'UndefinedInstructions': schedRWMatchings['Unmatched'] + undefinedSchedRWGroup,
+            # }
+    # print(json.dumps(output, indent=4))
 
     # Uncomment to print number of instructions NOT mapped to a resource group
     # print("unmatched: " + str(len(output['UndefinedInstructions'])))
@@ -95,7 +97,7 @@ def getWriteResVerboseDef():
     return pp.Suppress("def : WriteRes<") + pp.SkipTo(",")("Name")  + pp.SkipTo(">")("Resources") + pp.Suppress(">") + pp.Suppress("{")  + pp.SkipTo("}")("Data") + pp.Suppress("}")
 
 #Parser to find each SKLWriteResPair def
-def getSklWruteResPairDefParser():
+def getSklWriteResPairDefParser():
     return pp.Suppress("defm : SKLWriteResPair<") + pp.SkipTo(",")("Name") + pp.Suppress(",") +  pp.SkipTo(",")("Resources") + pp.Suppress(",") + pp.SkipTo(">")("Latency")
 
 #Parser to find each regex-instructions that belongs to a SKLWriteResGroup
@@ -128,9 +130,14 @@ def getWriteResDefs(writeResDef, schedSkylakeClientTD):
                 "Resources": writeRes['Resources'].strip(",").strip().strip("[").strip("]").replace(" ", "").split(","),
                 "ResourceCycles": [],
                 }
+        #Check if Resources contains only an empty element and should be completely empty instead
+        if len(tempDict['Resources'][0]) == 0:
+            tempDict['Resources'] = []
         #Set one resource cycle for each resource (implicit in .td-file)
-        for resource in tempDict['Resources']:
-            tempDict['ResourceCycles'].append(1)
+        else:
+            for resource in tempDict['Resources']:
+                tempDict['ResourceCycles'].append(1)
+
         writeResDefs.append(tempDict)
     return writeResDefs
 
@@ -167,6 +174,14 @@ def getWriteResVerboseDefs(writeResVerboseDef, schedSkylakeClientTD):
                     tempIntData = [s for s in tempData if s.isdigit()]
                     tempDict['ResourceCycles'] = list(map(int, tempIntData))
 
+        #Check if Resources contains only an empty element and should be completely empty instead
+        if len(tempDict['Resources'][0]) == 0:
+            tempDict['Resources'] = []
+        #Check if resourceCycles are not defined although resources are (resource-group "WriteLoad" suffers from this)
+        if len(tempDict['ResourceCycles']) == 0:
+            for resource in tempDict['Resources']:
+                tempDict['ResourceCycles'].append(1)
+
         writeResVerboseDefs.append(tempDict)
         
     return writeResVerboseDefs
@@ -179,9 +194,17 @@ def getSklWriteResPairDefs(sklWriteResPairDef, schedSkylakeClientTD):
                 'Name' : sklWriteResPair['Name'],
                 'Latency' : int(sklWriteResPair['Latency']),
                 'Resources' : sklWriteResPair["Resources"].strip(",").strip().split(","),
-                #RecourceCycles is undefined for the current version of the .td file, but ought probably be updated if the file is changed to a later version of llvm than 6.0.0
+                #RecourceCycles is implicit for the current version of the .td file, but may have to be updated if the file is changed to a later version of llvm than 6.0.0
                 'ResourceCycles' : []
                 }
+        #Set one resource cycle for each resource (implicit in .td-file)
+        #Check if Resources is empty and should be empty instead of containing just double quotations("")
+        if len(tempDict['Resources'][0]) == 0:
+            tempDict['Resources'] = []
+        #Set one resource cycle for each resource (implicit in .td-file)
+        else:
+            for resource in tempDict['Resources']:
+                tempDict['ResourceCycles'].append(1)
         sklWriteResPairs.append(tempDict)
 
     return sklWriteResPairs
