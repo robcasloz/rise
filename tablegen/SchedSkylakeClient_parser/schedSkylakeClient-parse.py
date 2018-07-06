@@ -21,7 +21,7 @@ def main():
     #Parser to find each WriteRes def with additional attributes (latency, resourcecycles etc.)
     writeResVerboseDefParser = getWriteResVerboseDef()
     #Parser to find each SKLWriteResPair def
-    sklWriteResPairDefParser = getSklWruteResPairDefParser()
+    sklWriteResPairDefParser = getSklWriteResPairDefParser()
     #Parser to find each regex-instructions that belongs to a SKLWriteResGroup
     llvmInstructionParser = getLlvmInstructionParser()
     #Parser to find each SKLWriteResGroup definition
@@ -128,7 +128,7 @@ def getWriteResDefs(writeResDef, schedSkylakeClientTD):
                 "Resources": writeRes['Resources'].strip(",").strip().strip("[").strip("]").replace(" ", "").split(","),
                 "ResourceCycles": [],
                 }
-        #Set one resource cycle for each resource
+        #Set one resource cycle for each resource (implicit in .td-file)
         for resource in tempDict['Resources']:
             tempDict['ResourceCycles'].append(1)
         writeResDefs.append(tempDict)
