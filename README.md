@@ -96,31 +96,32 @@ The results are located in the file rise/llvm-resource-model/output/X86SchedSkyl
 
 ### X86SchedSkylakeClient-parse.json
 The JSON is constructed as follows:
-{
-"ResourceGroups": [
-{
-"Name": "WriteALU",
-"Latency": 1,
-"Resources": [
-"SKLPort0156"
-],
-"ResourceCycles": [
-1
-]
-}
-],
-"DefinedInstructions": [
-{
-"Instruction": "ADC8i8",
-"ResourceGroup": "SKLWriteResGroup23"
-}
-],
-"UndefinedInstructions": [
-{
-"Instruction": "BUNDLE"
-}
-]
-}
+
+	{
+		"ResourceGroups": [
+		{
+			"Name": "WriteALU",
+			"Latency": 1,
+			"Resources": [
+				"SKLPort0156"
+			],
+			"ResourceCycles": [
+				1
+			]
+		}
+		],
+		"DefinedInstructions": [
+		{
+			"Instruction": "ADC8i8",
+			"ResourceGroup": "SKLWriteResGroup23"
+		}
+		],
+		"UndefinedInstructions": [
+		{
+			"Instruction": "BUNDLE"
+		}
+		]
+	}
 
 * [ResourceGroups]() holds a list of all the resource groups which are defined
 * [DefinedInstructions]() holds a list of all the instructions which are mapped to a resource-group
