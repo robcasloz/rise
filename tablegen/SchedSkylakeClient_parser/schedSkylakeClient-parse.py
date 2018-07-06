@@ -128,6 +128,9 @@ def getWriteResDefs(writeResDef, schedSkylakeClientTD):
                 "Resources": writeRes['Resources'].strip(",").strip().strip("[").strip("]").replace(" ", "").split(","),
                 "ResourceCycles": [],
                 }
+        #Set one resource cycle for each resource
+        for resource in tempDict['Resources']:
+            tempDict['ResourceCycles'].append(1)
         writeResDefs.append(tempDict)
     return writeResDefs
 
