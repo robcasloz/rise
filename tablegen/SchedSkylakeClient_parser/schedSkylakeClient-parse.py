@@ -51,7 +51,7 @@ def main():
         
     #Save all defined resource groups
     resourceGroups = []
-    for group in writeResDefs + writeResVerboseDefs + sklWriteResPairDefs:
+    for group in sklWriteResPairDefs + sklWriteResGroupDefs + writeResVerboseDefs + writeResDefs:
         resourceGroups.append(group['Name'])
 
     #Remove undefined resourcegroups from each defined instruction
@@ -67,15 +67,15 @@ def main():
 
     #Format the output and print json (indent=4 enables pretty print)
     output = {
-            'ResourceGroups': sklWriteResGroupDefs + writeResVerboseDefs + writeResDefs,
+            'ResourceGroups': sklWriteResPairDefs + sklWriteResGroupDefs + writeResVerboseDefs + writeResDefs,
             'DefinedInstructions': matchings['Matched'] + schedRWMatchings['Matched'],
             'UndefinedInstructions': schedRWMatchings['Unmatched'] + undefinedSchedRWGroup,
             }
     print(json.dumps(output, indent=4))
 
-    # Uncomment to print number of instructions NOT mapped to a resource group
+    #Uncomment to print number of instructions NOT mapped to a resource group
     # print("unmatched: " + str(len(output['UndefinedInstructions'])))
-    # Uncomment to print number of instructions mapped to a resource group
+    # #Uncomment to print number of instructions mapped to a resource group
     # print("matched" + str(len(output['DefinedInstructions'])))
 
 #Removes undefined resouorcegroups from an instruction
