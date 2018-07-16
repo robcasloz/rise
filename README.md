@@ -110,12 +110,14 @@ The first way is that the file "X86SchedSkylakeClient.td" defines a lot of regul
 Example: 
 
 	def: InstRW<[SKLWriteResGroup10], (instregex "ADD(16|32|64)ri")>;
-Maps all instructions matching the regex "ADD(16|32|64)ri" to the resource group SKLWriteResGroup10.
+
+Maps all instructions matching the regular expression "ADD(16|32|64)ri" to the resource group SKLWriteResGroup10.
 
 ### Using TableGen
 The second is that LLVM's tablegen command can output information about all isntructions defined for the x86 architecture. Part of this information is  a list of resource groups, which define what particular resource groups that instruction is part of. The reason for it being a list is that depending on what x86-architecture the code is being compiled for, different resource groups are used(for example, there is a difference between AMD and Intel architectures).
 Example:
 ADD16ri defines:
+
 	list<SchedReadWrite> SchedRW = [WriteALU];
 
 Where WriteALU is a resource group defined in "X86SchedSkylakeClient.td".
@@ -126,6 +128,7 @@ There are additional resource definitions in "X86SchedSkylakeClient.td" that nee
 
 ### Load Latency
 This is the amount of cycles it takes for loads to access the cache
+
 	let LoadLatency = 5;
 
 There is also a related resource defining for how long the load register can be used before it needs to be available to receive the load after the original instruction was issued.
@@ -167,31 +170,33 @@ The results are located in the file /llvm-resource-model/output/X86SchedSkylakeC
 
 ### X86SchedSkylakeClient-parse_output.json
 The JSON is constructed as follows:
-{
-"ResourceGroups": [
-{
-"Name": "WriteALU",
-"Latency": 1,
-"Resources": [
-"SKLPort0156"
-],
-"ResourceCycles": [
-1
-]
-}
-],
-"DefinedInstructions": [
-{
-"Instruction": "ADC8i8",
-"ResourceGroup": "SKLWriteResGroup23"
-}
-],
-"UndefinedInstructions": [
-{
-"Instruction": "BUNDLE"
-}
-]
-}
+
+	{
+		"ResourceGroups": [
+			{
+				"Name": "WriteALU",
+				"Latency": 1,
+				"Resources": [
+					"SKLPort0156"
+				],
+				"ResourceCycles": [
+					1
+				]
+			}
+		],
+		"DefinedInstructions": [
+			{
+				"Instruction": "ADC8i8",
+				"ResourceGroup": "SKLWriteResGroup23"
+			}
+		],
+		"UndefinedInstructions": [
+			{
+				"Instruction": "BUNDLE"
+			}
+		]
+	}
+
 
 * ResourceGroups holds a list of all the resource groups which are defined
 * DefinedInstructions holds a list of all the instructions which are mapped to a resource-group
