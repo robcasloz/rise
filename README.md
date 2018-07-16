@@ -24,53 +24,53 @@ The results are gathered in /agner-fog-resource-model/output/agner-resource-mode
 
 ### agner-resource-model_output.json
 The output is formatted as a JSON dictionary with the following hierarchy
-
+	
 	{
 	    "ResourceUsage": [
-		{
-		    "Instruction": "MOV",
-		    "Operands": "r,i",
-		    "Resources": [
-			{
-			    "Resource": "p0156",
-			    "ResourceUsage": 1,
-			    "HoldTime": 1.0
-			}
-		    ]
-		}
+	        {
+	            "Instruction": "MOV",
+	            "Operands": "r,i",
+	            "Resources": [
+	                {
+	                    "Resource": "p0156",
+	                    "ResourceUsage": 1,
+	                    "HoldTime": 1.0
+	                }
+	            ]
+	        }
 	    "UndefinedPorts": [
-		{
-		    "Instruction": "RCR RCL",
-		    "Operands": "m,i",
-		    "Uops fused domain": 11,
-		    "Uops unfused domain": 11,
-		    "Uops each port": null,
-		    "Latency": null,
-		    "Reciprocal throughput": 6,
-		    "Comments": null
-		},
+	        {
+	            "Instruction": "RCR RCL",
+	            "Operands": "m,i",
+	            "Uops fused domain": 11,
+	             "Uops unfused domain": 11,
+	            "Uops each port": null,
+	            "Latency": null,
+	            "Reciprocal throughput": 6,
+	            "Comments": null
+	        },
 	    "NoReciprocalThrougput": [
-		{
-		    "Instruction": "CWDE",
-		    "Operands": null,
-		    "Uops fused domain": 1,
-		    "Uops unfused domain": 1,
-		    "Uops each port": "p0156",
-		    "Latency": 1,
-		    "Reciprocal throughput": null,
-		    "Comments": null
-		},
+	        {
+	            "Instruction": "CWDE",
+	            "Operands": null,
+	            "Uops fused domain": 1,
+	            "Uops unfused domain": 1,
+	            "Uops each port": "p0156",
+	            "Latency": 1,
+	            "Reciprocal throughput": null,
+	            "Comments": null
+	        },
 	    "UndefinedReciprocalThrougput": [
-		{
-		    "Instruction": "MOVBE",
-		    "Operands": "r16,m16",
-		    "Uops fused domain": 3,
-		    "Uops unfused domain": 3,
-		    "Uops each port": "2p0156 p23",
-		    "Latency": null,
-		    "Reciprocal throughput": "0.5-1",
-		    "Comments": "MOVBE"
-		},
+	        {
+	            "Instruction": "MOVBE",
+	            "Operands": "r16,m16",
+	            "Uops fused domain": 3,
+	            "Uops unfused domain": 3,
+	            "Uops each port": "2p0156 p23",
+	            "Latency": null,
+	            "Reciprocal throughput": "0.5-1",
+	            "Comments": "MOVBE"
+	        },
 	    ]
 	}
 
@@ -110,7 +110,6 @@ The first way is that the file "X86SchedSkylakeClient.td" defines a lot of regul
 Example: 
 
 	def: InstRW<[SKLWriteResGroup10], (instregex "ADD(16|32|64)ri")>;
-
 Maps all instructions matching the regular expression "ADD(16|32|64)ri" to the resource group SKLWriteResGroup10.
 
 ### Using TableGen
@@ -172,30 +171,31 @@ The results are located in the file /llvm-resource-model/output/X86SchedSkylakeC
 The JSON is constructed as follows:
 
 	{
-		"ResourceGroups": [
-			{
-				"Name": "WriteALU",
-				"Latency": 1,
-				"Resources": [
-					"SKLPort0156"
-				],
-				"ResourceCycles": [
-					1
-				]
-			}
-		],
-		"DefinedInstructions": [
-			{
-				"Instruction": "ADC8i8",
-				"ResourceGroup": "SKLWriteResGroup23"
-			}
-		],
-		"UndefinedInstructions": [
-			{
-				"Instruction": "BUNDLE"
-			}
-		]
+	    "ResourceGroups": [
+	        {
+	            "Name": "WriteALU",
+	            "Latency": 1,
+	            "Resources": [
+	                "SKLPort0156"
+	            ],
+	            "ResourceCycles": [
+	                1
+	            ]
+	        }
+	    ],
+	    "DefinedInstructions": [
+	        {
+	            "Instruction": "ADC8i8",
+	            "ResourceGroup": "SKLWriteResGroup23"
+	        }
+	    ],
+	    "UndefinedInstructions": [
+	        {
+	            "Instruction": "BUNDLE"
+	        }
+	    ]
 	}
+
 
 
 * ResourceGroups holds a list of all the resource groups which are defined
