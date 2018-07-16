@@ -9,7 +9,7 @@ def main():
     data = yaml.safe_load(stream)
     
     #Prints
-    print (parser(data))
+    print (json.dumps(parser(data), indent=4))
 
 #Parse the .yaml file
 def parser(data):
@@ -90,8 +90,7 @@ def parser(data):
     'NoReciprocalThrougput': noRecThro,
     'UndefinedReciprocalThrougput': undefRecThro,
     }
-    #Print the list
-    print (json.dumps(output, indent=4))
+    return output
 
 #Find the largest cardinality in a string of port-definitions
 def largestCardinality (ports):
