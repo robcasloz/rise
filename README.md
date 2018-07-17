@@ -1,6 +1,4 @@
 # Unison x86 resource model
-Created torsdag 28 juni 2018
-
 Introduction
 ============
 Work done by Jacob Kimblad during his time as a student intern on the Unison compiler reasearch project. The goal was to produce a valid resource model for X86-architectures used by Unison during instruction selection and instruction scheduling.
@@ -12,18 +10,25 @@ Currently, this covers only about ~500 instructions, and it is unclear wether or
 <http://www.agner.org/optimize/> located in optimization manual 4.
 
 ### Calculations
+A disadvantage of this model is that there is no information about how long individual processor resources are used for. We are only told what the worst-case is for all of the resources.
+
+#### Throughput
+The amount of time a resource is held is calculated by the following equation
+
+resource usage = reciprocal ``throughput`` * (cardinality / prefix)
 
 #### Load/Store-ports
 Resources "p23", "p237" and "p4" are used for making loads and stores. 
-
-
 
 Results
 -------
 The results are gathered in /agner-fog-resource-model/output/agner-resource-model_output.json
 
+Generating the results
+----------------------
+
 ### agner-resource-model_output.json
-The output is formatted as a JSON dictionary with the following hierarchy
+The output is formatted as a JSON dictionary with the following hierarchy. Most of the information is redundant and is kept as-is from the original table.
 	
 	{
 	    "ResourceUsage": [
@@ -38,17 +43,19 @@ The output is formatted as a JSON dictionary with the following hierarchy
 	                }
 	            ]
 	        }
+	    ]
 	    "UndefinedPorts": [
 	        {
 	            "Instruction": "RCR RCL",
 	            "Operands": "m,i",
 	            "Uops fused domain": 11,
-	             "Uops unfused domain": 11,
+	            "Uops unfused domain": 11,
 	            "Uops each port": null,
 	            "Latency": null,
 	            "Reciprocal throughput": 6,
 	            "Comments": null
 	        },
+	    ]
 	    "NoReciprocalThrougput": [
 	        {
 	            "Instruction": "CWDE",
@@ -60,6 +67,7 @@ The output is formatted as a JSON dictionary with the following hierarchy
 	            "Reciprocal throughput": null,
 	            "Comments": null
 	        },
+	    ]
 	    "UndefinedReciprocalThrougput": [
 	        {
 	            "Instruction": "MOVBE",
@@ -76,13 +84,13 @@ The output is formatted as a JSON dictionary with the following hierarchy
 
 
 * ResourceUsage are instructions that are complete with all definintons of their resource usage.
-* UndefinedPorts are instructions that have no ports defined, but they do however have a reciprocal througput defined. These would be modeled as taking zero resources.
-* NoReciprocalThrougput are instructions that have no reciprocal througput defined. These would be modeled as holding their resources for zero cycles.
-* UndefinedReciprocalThrougput are instructions that have a defined reciprocal throughput that is non-numerical. A lot of these can easily be solved manually or automatically as it typically is a question of the throughput being defined on an interval, or an estimation, examples : "0.5-2", "~200".
+* UndefinedPorts are instructions that have no ports defined, but they do however have a reciprocal throughput defined. These would be modeled as taking zero resources.
+* NoReciprocalThroughput are instructions that have no reciprocal throughput defined. These would be modeled as holding their resources for zero cycles.
+* UndefinedReciprocalThroughput are instructions that have a defined reciprocal throughput that is non-numerical. A lot of these can easily be solved manually or automatically as it typically is a question of the throughput being defined on an interval, or an estimation, examples : "0.5-2", "~200".
 
 
 ### Coverage
-354 instructions defined in the ResourceUsage list in "agner-resource-model_output.json"
+There are 354 instructions defined in the ResourceUsage list in "agner-resource-model_output.json". It is unclear how many of these that are used in Unison, as work still remains to be done in mapping these instructions to their representatives in LLVM.
 
 Resource model based on LLVM 6.0.0
 ==================================
@@ -181,7 +189,7 @@ The JSON is constructed as follows:
 	            "ResourceCycles": [
 	                1
 	            ]
-	        }
+	        } 
 	    ],
 	    "DefinedInstructions": [
 	        {
@@ -198,9 +206,13 @@ The JSON is constructed as follows:
 
 
 
-* ResourceGroups holds a list of all the resource groups which are defined
-* DefinedInstructions holds a list of all the instructions which are mapped to a resource-group
-* UndefinedInstructions holds a list of all the instruction which are NOT currently mapped to any resource-group
+* "ResourceGroups" holds a list of dictionaries, containing all the resource groups which are defined
+	* "Name" is a string of the llvm-corresponding name of the resource group.
+	* "Latency" is an integer representing the delay that the instruction generates in a dependency chain.
+	* "Resources" is a list of strings, representing what specific resources are used by an instruction.
+	* "ResourceCycles" is a list of integers where each integer represents for how many cycles a resource is kept by an instruction.
+* "DefinedInstructions" holds a list of all the instructions which are mapped to a resource-group
+* "UndefinedInstructions" holds a list of all the instruction which are NOT currently mapped to any resource-group
 
 
 ### Coverage
@@ -226,6 +238,4 @@ Output: A list of all instructions with a respective SchedRW defined. This is us
 ### X86SchedSkylakeClient-parser.py
 Input: The file "X86SchedSkylakeClient.td" from the input-folder. Also the output of tablegen-instruction-parser.py, currently fetched from "tablegen-instruction-parser_output.td" in the input folder.
 Output: See heading "X86SchedSkylakeClient-parse_ouput.json"
-
-
 
