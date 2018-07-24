@@ -10,7 +10,7 @@ Currently, this covers only about ~500 instructions, and it is unclear wether or
 <http://www.agner.org/optimize/> located in optimization manual 4.
 
 ### Calculations
-A disadvantage of this model is that there is no information about how long individual processor resources are used for. We are only told what the worst-case is for all of the resources.
+A disadvantage of this model is that there is no information about how long individual processor resources are used for, as the throughput is defined on instruction level, and not on µ-operation level. This can be improved a bit for operations using the load/store resources, and is explained in detail under "Load/Store-ports".
 
 #### Throughput
 The amount of time a resource is held is calculated by the following equation
@@ -131,44 +131,11 @@ Where WriteALU is a resource group defined in "X86SchedSkylakeClient.td".
 
 Additional LLVM resource modelling
 ----------------------------------
-There are additional resource definitions in "X86SchedSkylakeClient.td" that need special consideration if they are to be used in Unison. I am not entirely sure about the meaning of every definition and might only give the best guess from my limited knowledge. [This](https://github.com/llvm-mirror/llvm/blob/master/include/llvm/Target/TargetSchedule.td) is a good resource from LLVM to explore further in detail what some of the given definitions are.
-
-### Load Latency
-This is the amount of cycles it takes for loads to access the cache
-
-	let LoadLatency = 5;
-
-There is also a related resource defining for how long the load register can be used before it needs to be available to receive the load after the original instruction was issued.
+There is a resource defining for how long the load register can be used before it needs to be available to receive the load after the original instruction was issued.
 
 	// Loads are 5 cycles, so ReadAfterLd registers needn't be available until 5
 	// cycles after the memory operand.
 	def : ReadAdvance<ReadAfterLd, 5>;
-
-
-### Folded Loads
-From "tablegen/SchedSkylakeClient_parser/X86SchedSkylakeClient.td" line 74
-What LLVM calls "folded loads" needs special treatment in the resource model. The following extract from "X86SchedSkylakeClient.td" describes the issue. In the text "SchedWrites" can be seen as resource groups.
-
-	// Many SchedWrites are defined in pairs with and without a folded load.
-	// Instructions with folded loads are usually micro-fused, so they only appear
-	// as two micro-ops when queued in the reservation station.
-	// This multiclass defines the resource usage for variants with and without
-	// folded loads.
-	multiclass SKLWriteResPair<X86FoldableSchedWrite SchedRW,
-	                          ProcResourceKind ExePort,
-	                          int Lat> {
-	  // Register variant is using a single cycle on ExePort.
-	  def : WriteRes<SchedRW, [ExePort]> { let Latency = Lat; }
-	
-	  // Memory variant also uses a cycle on port 2/3 and adds 5 cycles to the
-	  // latency.
-	  def : WriteRes<SchedRW.Folded, [SKLPort23, ExePort]> {
-	     let Latency = !add(Lat, 5);
-	  }
-	}
-	// A folded store needs a cycle on port 4 for the store data, but it does not
-	// need an extra port 2/3 cycle to recompute the address.
-	def : WriteRes<WriteRMW, [SKLPort4]>;
 
 
 Results
@@ -216,7 +183,7 @@ The JSON is constructed as follows:
 
 
 ### Coverage
-As of writing (2018-07-06), this resource model currently covers 3348/4292 instructions located at /unison/src/unison/src/Unison/Target/X86/SpecsGen/AllInstructions.hs in Unison.
+As of writing (2018-07-20), this resource model currently covers 3613/4292 instructions located at /unison/src/unison/src/Unison/Target/X86/SpecsGen/AllInstructions.hs in Unison.
 
 Generating the results
 ----------------------
