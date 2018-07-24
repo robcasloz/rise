@@ -1,12 +1,8 @@
 #!/usr/bin/env python
 
-import yaml
 import json
 import pyparsing as pp
 import re
-import time
-import ast
-import sys
 
 #Separate file with a list containing all x86 instructions defined for unison
 from unison_instructions import getUnisonInstructions
@@ -56,34 +52,82 @@ def main():
 
     #Remove undefined resourcegroups from each defined instruction
     undefinedSchedRWGroup = []
+    resourceGroupTuples = []
     for instruction in list(schedRWMatchings['Matched']):
         tempInstruction = removeUndefinedResourceGroups(instruction, resourceGroups)
         #Instruction had no defined resource group for skylake, so its resource usage is unedfined
         if not tempInstruction['ResourceGroup']:
             undefinedSchedRWGroup.append({'Instruction': tempInstruction['Instruction']})
             schedRWMatchings['Matched'].remove(instruction)
+        elif len(tempInstruction['ResourceGroup']) > 1:
+            resourceGroupTuples.append(tempInstruction['ResourceGroup'])
+            tempInstruction['ResourceGroup'] = "".join(tempInstruction['ResourceGroup'])
         else:
             instruction = tempInstruction
 
+    #Some instructions uses several resource-groups, so we create custom combined resourcegroups here.
+    # Currently, the only collection of resource groups used by instructions are "WriteALULd" and "WriteRMW"
+    # which create the combined resource "WriteALULdWriteRMW"
+    definedResourceGroups = sklWriteResPairDefs + sklWriteResGroupDefs + writeResVerboseDefs + writeResDefs
+    combinedResourceGroups = []
+    for resourceGroups in set(tuple(row) for row in resourceGroupTuples):
+        tempResource = combineResourceGroups(resourceGroups, definedResourceGroups)
+        combinedResourceGroups.append(tempResource)
+
+    definedResourceGroups.extend(combinedResourceGroups)
     #Format the output and print json (indent=4 enables pretty print)
     output = {
-            'ResourceGroups': sklWriteResPairDefs + sklWriteResGroupDefs + writeResVerboseDefs + writeResDefs,
+            'ResourceGroups': definedResourceGroups,
             'DefinedInstructions': matchings['Matched'] + schedRWMatchings['Matched'],
             'UndefinedInstructions': schedRWMatchings['Unmatched'] + undefinedSchedRWGroup,
             }
     print(json.dumps(output, indent=4))
 
-    #Uncomment to print number of instructions NOT mapped to a resource group
+    # Uncomment to print number of instructions NOT mapped to a resource group
     # print("unmatched: " + str(len(output['UndefinedInstructions'])))
-    # #Uncomment to print number of instructions mapped to a resource group
+    # # Uncomment to print number of instructions mapped to a resource group
     # print("matched" + str(len(output['DefinedInstructions'])))
+
+#Combines several defined resource groups into a single one
+def combineResourceGroups (resourceGroupNames, definedResourceGroups):
+    tempResourceGroup = {
+            "Name" : "",
+            "Latency" : 0,
+            "Resources" : [],
+            "ResourceCycles" : [],
+            }
+
+    for resourceGroupName in resourceGroupNames:
+        tempResourceTuple = next(item for item in definedResourceGroups if item['Name'] == resourceGroupName)
+        tempResourceGroup['Name'] += resourceGroupName 
+        #Check if new largest latency
+        if tempResourceGroup['Latency'] < tempResourceTuple['Latency']:
+            tempResourceGroup['Latency'] = tempResourceTuple['Latency']
+        n = 0
+        while n < len(tempResourceTuple['Resources']):
+            #Resource is not yet defined
+            if tempResourceTuple['Resources'][n] not in tempResourceGroup['Resources']:
+                tempResourceGroup['Resources'].append(tempResourceTuple['Resources'][n])
+                tempResourceGroup['ResourceCycles'].append(tempResourceTuple['ResourceCycles'][n])
+
+            #Resource is defined, so we need to add resource cycles to existing
+            else:
+                resourceIndex = tempResourceGroup['Resources'].index(tempResourceTuple['Resources'][n])
+                tempResourceGroup['ResourceCycles'][resourceIndex] += tempResourceGroup['ResourceCycles'][n]
+
+            n += 1
+
+    return tempResourceGroup
 
 #Removes undefined resouorcegroups from an instruction
 def removeUndefinedResourceGroups (instruction, resourceGroups):
+    definedResources = []
     #Get resource groups that are part of the ones defined for skylake AND are part of the instruction
-    undef = list(set(instruction['ResourceGroup']) - set(resourceGroups))
-    instruction['ResourceGroup'] = "".join(list(set(resourceGroups).intersection(set(instruction['ResourceGroup']))))
-    # instruction['ResourceGroup'] = "".join(tempInst)
+    for resource in instruction['ResourceGroup']:
+        if resource in resourceGroups:
+            definedResources.append(resource)
+
+    instruction['ResourceGroup'] = sorted(definedResources)
     return instruction
 
 #Parser to find each basic WriteRes def with no additional attributes
@@ -124,7 +168,7 @@ def getWriteResDefs(writeResDef, schedSkylakeClientTD):
         #Pretty up the parsed data
         tempDict = {
                 "Name": writeRes['Name'],
-                "Latency": None,
+                "Latency": 1,
                 "Resources": writeRes['Resources'].strip(",").strip().strip("[").strip("]").replace(" ", "").split(","),
                 "ResourceCycles": [],
                 }
@@ -147,7 +191,7 @@ def getWriteResVerboseDefs(writeResVerboseDef, schedSkylakeClientTD):
         writeResDict = writeRes.asDict()
         tempDict = {
                 'Name' : writeRes['Name'],
-                'Latency' : None,
+                'Latency' : 1,
                 'Resources' : writeRes['Resources'].strip(",").strip().strip("[").strip("]").replace(" ", "").split(","),
                 'ResourceCycles' : []
                 }
@@ -165,7 +209,7 @@ def getWriteResVerboseDefs(writeResVerboseDef, schedSkylakeClientTD):
                         tempDict['Latency'] = int(data.split("=")[1].strip())
                     #Latency is NaN (This happens due to wrongfully parsing once inside a specially defined function)
                     else:
-                        tempDict['Latency'] = None
+                        tempDict['Latency'] = 1
                 elif data.find("ResourceCycles") >= 0:
                     tempData = data.split("=")[1].strip().replace(" ", "").strip("[").strip("]").split(",")
                     #Check all list items are numericals
@@ -204,6 +248,33 @@ def getSklWriteResPairDefs(sklWriteResPairDef, schedSkylakeClientTD):
             for resource in tempDict['Resources']:
                 tempDict['ResourceCycles'].append(1)
         sklWriteResPairs.append(tempDict)
+
+        # Defined the corresponding resource with a folded load
+        resourcesFolded = list(tempDict['Resources'])
+        added = False
+
+        #Check if resource-group already uses port23
+        if 'SKLPort23' not in tempDict['Resources']:
+            resourcesFolded.append('SKLPort23')
+            added = True
+        tempDictFolded = {
+                'Name' : sklWriteResPair['Name'] + 'Ld',
+                'Latency' : int(sklWriteResPair['Latency']) + 5,
+                'Resources' : resourcesFolded,
+                #RecourceCycles is implicit for the current version of the .td file, but may have to be updated if the file is changed to a later version of llvm than 6.0.0
+                'ResourceCycles' : []
+                }
+
+        #Add resource cycles for port23
+        # if added:
+            # tempDictFolded['ResourceCycles'] = tempDict['ResourceCycles'].append(1)
+        
+        #Add implicitly defined resource cycles
+        for resource in tempDictFolded['Resources']:
+            tempDictFolded['ResourceCycles'].append(1)
+
+        #Add to return-list
+        sklWriteResPairs.append(tempDictFolded)
 
     return sklWriteResPairs
 
@@ -322,6 +393,5 @@ def regexMatching (unisonInstructions, instructions):
     return matchings
 
 if __name__ == '__main__':
-    start_time = time.time()
     main()
 
