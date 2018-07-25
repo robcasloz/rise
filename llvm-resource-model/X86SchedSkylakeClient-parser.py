@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 
 import json
+import yaml
 import pyparsing as pp
 import re
-
-#Separate file with a list containing all x86 instructions defined for unison
-from unison_instructions import getUnisonInstructions
 
 def main():
 
@@ -84,9 +82,19 @@ def main():
     print(json.dumps(output, indent=4))
 
     # Uncomment to print number of instructions NOT mapped to a resource group
-    # print("unmatched: " + str(len(output['UndefinedInstructions'])))
-    # # Uncomment to print number of instructions mapped to a resource group
-    # print("matched" + str(len(output['DefinedInstructions'])))
+    print("unmatched: " + str(len(output['UndefinedInstructions'])))
+    # Uncomment to print number of instructions mapped to a resource group
+    print("matched: " + str(len(output['DefinedInstructions'])))
+
+#Fetch all instructions defined for unison in x86.yaml
+def getUnisonInstructions():
+    data = yaml.safe_load(open("input/x86.yaml", 'r'))
+
+    instructions = []
+    for instruction in data['instruction-set'][0]['instructions']:
+        instructions.append(instruction['id'])
+
+    return instructions
 
 #Combines several defined resource groups into a single one
 def combineResourceGroups (resourceGroupNames, definedResourceGroups):
