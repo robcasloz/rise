@@ -82,9 +82,9 @@ def main():
     print(json.dumps(output, indent=4))
 
     # Uncomment to print number of instructions NOT mapped to a resource group
-    print("unmatched: " + str(len(output['UndefinedInstructions'])))
+    # print("unmatched: " + str(len(output['UndefinedInstructions'])))
     # Uncomment to print number of instructions mapped to a resource group
-    print("matched: " + str(len(output['DefinedInstructions'])))
+    # print("matched: " + str(len(output['DefinedInstructions'])))
 
 #Fetch all instructions defined for unison in x86.yaml
 def getUnisonInstructions():
