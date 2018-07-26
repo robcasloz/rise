@@ -5,7 +5,7 @@ import pyparsing as pp
 import sys
 
 #To envoke this program correctly, execute:
-#llvm-tblgen /.../llvm-6.0.0.src/lib/Target/X86/X86.td -InstrInfo -I /.../llvm-6.0.0.src/include -I ~/Projects/llvm-6.0.0.src/lib/Target/X86 | ./tablegen-instruction-parser.py
+#llvm-tblgen /.../llvm-6.0.0.src/lib/Target/X86/X86.td -InstrInfo -I /.../llvm-6.0.0.src/include -I /.../llvm-6.0.0.src/lib/Target/X86 | ./tablegen-instruction-parser.py
 #With local paths to llvm 6.0.0 (non-compiled version)
 
 # Main
