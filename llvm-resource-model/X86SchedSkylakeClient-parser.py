@@ -53,13 +53,15 @@ def main():
     resourceGroupTuples = []
     for instruction in list(schedRWMatchings['Matched']):
         tempInstruction = removeUndefinedResourceGroups(instruction, resourceGroups)
-        #Instruction had no defined resource group for skylake, so its resource usage is unedfined
+        #Instruction had no defined resource group for skylake, so its resource usage is undefined
         if not tempInstruction['ResourceGroup']:
             undefinedSchedRWGroup.append({'Instruction': tempInstruction['Instruction']})
             schedRWMatchings['Matched'].remove(instruction)
+        #Instruction has more than a singled defined resource group
         elif len(tempInstruction['ResourceGroup']) > 1:
             resourceGroupTuples.append(tempInstruction['ResourceGroup'])
             tempInstruction['ResourceGroup'] = "".join(tempInstruction['ResourceGroup'])
+        #Instruction has a single defined resource group
         else:
             instruction = tempInstruction
 
@@ -73,11 +75,21 @@ def main():
         combinedResourceGroups.append(tempResource)
 
     definedResourceGroups.extend(combinedResourceGroups)
+
+    #Load instructions that have been manually mapped to resource groups
+    customInstructions = getCustomInstructions()
+    undefinedInstructions = schedRWMatchings['Unmatched'] + undefinedSchedRWGroup
+    #Remove manually defined instructions from the list of undefined instructions
+    for instruction in customInstructions:
+        undefinedInstructions[:] = [d for d in undefinedInstructions if d.get('Instruction') != instruction]
+    
+    definedResourceGroups.extend(customInstructions)
+
     #Format the output and print json (indent=4 enables pretty print)
     output = {
             'ResourceGroups': definedResourceGroups,
             'DefinedInstructions': matchings['Matched'] + schedRWMatchings['Matched'],
-            'UndefinedInstructions': schedRWMatchings['Unmatched'] + undefinedSchedRWGroup,
+            'UndefinedInstructions': undefinedInstructions,
             }
     print(json.dumps(output, indent=4))
 
@@ -85,6 +97,11 @@ def main():
     # print("unmatched: " + str(len(output['UndefinedInstructions'])))
     # Uncomment to print number of instructions mapped to a resource group
     # print("matched: " + str(len(output['DefinedInstructions'])))
+
+#Some instructions does not have a given resourcegroup and have instead been manually mapped to a resource group, so we fetch them from that input file to include in the output
+def getCustomInstructions():
+    data = json.load(open('input/manual_instruction_mapping.json'))
+    return data['ManualMapping']
 
 #Fetch all instructions defined for unison in x86.yaml
 def getUnisonInstructions():
