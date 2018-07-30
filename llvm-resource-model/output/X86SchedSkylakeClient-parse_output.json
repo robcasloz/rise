@@ -13860,57 +13860,39 @@
         },
         {
             "Instruction": "AAA",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "AAD8i8",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "AAM8i8",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "AAS",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "ACQUIRE_MOV16rm",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "ACQUIRE_MOV32rm",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "ACQUIRE_MOV64rm",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "ACQUIRE_MOV8rm",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "ADC16i16",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADC16mi8",
@@ -13918,15 +13900,11 @@
         },
         {
             "Instruction": "ADC16ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADC32i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADC32mi8",
@@ -13934,15 +13912,11 @@
         },
         {
             "Instruction": "ADC32ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADC64i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADC64mi32",
@@ -13954,15 +13928,11 @@
         },
         {
             "Instruction": "ADC64ri32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADC64ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADC8mi8",
@@ -13970,15 +13940,11 @@
         },
         {
             "Instruction": "ADC8ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD16i16",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD16mi8",
@@ -13986,33 +13952,23 @@
         },
         {
             "Instruction": "ADD16ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD16ri8_DB",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD16ri_DB",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD16rr_DB",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD32i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD32mi8",
@@ -14020,33 +13976,23 @@
         },
         {
             "Instruction": "ADD32ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD32ri8_DB",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD32ri_DB",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD32rr_DB",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD64i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD64mi32",
@@ -14058,33 +14004,23 @@
         },
         {
             "Instruction": "ADD64ri32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD64ri32_DB",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD64ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD64ri8_DB",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD64rr_DB",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADD8mi8",
@@ -14092,39 +14028,27 @@
         },
         {
             "Instruction": "ADD8ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ADDSDrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "ADDSDrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "ADDSSrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "ADDSSrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "AND16i16",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "AND16mi8",
@@ -14132,15 +14056,11 @@
         },
         {
             "Instruction": "AND16ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "AND32i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "AND32mi8",
@@ -14148,15 +14068,11 @@
         },
         {
             "Instruction": "AND32ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "AND64i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "AND64mi32",
@@ -14168,15 +14084,11 @@
         },
         {
             "Instruction": "AND64ri32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "AND64ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "AND8mi8",
@@ -14184,255 +14096,171 @@
         },
         {
             "Instruction": "AND8ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "ARPL16mr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "ARPL16rr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "AVX2_SETALLONES",
-            "ResourceGroup": [
-                "WriteZero"
-            ]
+            "ResourceGroup": "WriteZero"
         },
         {
             "Instruction": "AVX_SET0",
-            "ResourceGroup": [
-                "WriteZero"
-            ]
+            "ResourceGroup": "WriteZero"
         },
         {
             "Instruction": "BEXTRI32mi",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BEXTRI32ri",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BEXTRI64mi",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BEXTRI64ri",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLCFILL32rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLCFILL32rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLCFILL64rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLCFILL64rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLCI32rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLCI32rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLCI64rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLCI64rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLCIC32rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLCIC32rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLCIC64rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLCIC64rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLCMSK32rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLCMSK32rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLCMSK64rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLCMSK64rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLCS32rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLCS32rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLCS64rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLCS64rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLSFILL32rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLSFILL32rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLSFILL64rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLSFILL64rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLSIC32rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLSIC32rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BLSIC64rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BLSIC64rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "BOUNDS16rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "BOUNDS32rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "BT16mr",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BT32mr",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BT64mr",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "BTC16mr",
@@ -14472,81 +14300,55 @@
         },
         {
             "Instruction": "CALLpcrel16",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "CALLpcrel32",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "CATCHPAD",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "CATCHRET",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "CDQE",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "CLEANUPRET",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "CLFLUSHOPT",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "CLGI",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "CLI",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "CLTS",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "CLWB",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "CLZEROr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "CMP16i16",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "CMP16mi8",
@@ -14554,15 +14356,11 @@
         },
         {
             "Instruction": "CMP16ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "CMP32i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "CMP32mi8",
@@ -14570,15 +14368,11 @@
         },
         {
             "Instruction": "CMP32ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "CMP64i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "CMP64mi32",
@@ -14590,15 +14384,11 @@
         },
         {
             "Instruction": "CMP64ri32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "CMP64ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "CMP8mi8",
@@ -14606,993 +14396,663 @@
         },
         {
             "Instruction": "CMP8ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "CMPPDrmi_alt",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "CMPPDrri_alt",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "CMPPSrmi_alt",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "CMPPSrri_alt",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "CMPSB",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "CMPSDrm_alt",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "CMPSDrr_alt",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "CMPSL",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "CMPSQ",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "CMPSSrm_alt",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "CMPSSrr_alt",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "CMPSW",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "CRC32r32m16",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "CRC32r32m32",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "CRC32r32m8",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "CRC32r32r16",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "CRC32r32r32",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "CRC32r32r8",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "CRC32r64m64",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "CRC32r64m8",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "CRC32r64r64",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "CRC32r64r8",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "CS_PREFIX",
-            "ResourceGroup": [
-                "WriteNop"
-            ]
+            "ResourceGroup": "WriteNop"
         },
         {
             "Instruction": "CVTSI2SDrm",
-            "ResourceGroup": [
-                "WriteCvtI2FLd"
-            ]
+            "ResourceGroup": "WriteCvtI2FLd"
         },
         {
             "Instruction": "CVTSI2SSrm",
-            "ResourceGroup": [
-                "WriteCvtI2FLd"
-            ]
+            "ResourceGroup": "WriteCvtI2FLd"
         },
         {
             "Instruction": "DAA",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "DAS",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "DATA16_PREFIX",
-            "ResourceGroup": [
-                "WriteNop"
-            ]
+            "ResourceGroup": "WriteNop"
         },
         {
             "Instruction": "DEC16r_alt",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "DEC32r_alt",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "DIV16m",
-            "ResourceGroup": [
-                "WriteIDivLd"
-            ]
+            "ResourceGroup": "WriteIDivLd"
         },
         {
             "Instruction": "DIV32m",
-            "ResourceGroup": [
-                "WriteIDivLd"
-            ]
+            "ResourceGroup": "WriteIDivLd"
         },
         {
             "Instruction": "DIV64m",
-            "ResourceGroup": [
-                "WriteIDivLd"
-            ]
+            "ResourceGroup": "WriteIDivLd"
         },
         {
             "Instruction": "DIV8m",
-            "ResourceGroup": [
-                "WriteIDivLd"
-            ]
+            "ResourceGroup": "WriteIDivLd"
         },
         {
             "Instruction": "DIV8r",
-            "ResourceGroup": [
-                "WriteIDiv"
-            ]
+            "ResourceGroup": "WriteIDiv"
         },
         {
             "Instruction": "DIVSDrm_Int",
-            "ResourceGroup": [
-                "WriteFDivLd"
-            ]
+            "ResourceGroup": "WriteFDivLd"
         },
         {
             "Instruction": "DIVSDrr_Int",
-            "ResourceGroup": [
-                "WriteFDiv"
-            ]
+            "ResourceGroup": "WriteFDiv"
         },
         {
             "Instruction": "DIVSSrm_Int",
-            "ResourceGroup": [
-                "WriteFDivLd"
-            ]
+            "ResourceGroup": "WriteFDivLd"
         },
         {
             "Instruction": "DIVSSrr_Int",
-            "ResourceGroup": [
-                "WriteFDiv"
-            ]
+            "ResourceGroup": "WriteFDiv"
         },
         {
             "Instruction": "DS_PREFIX",
-            "ResourceGroup": [
-                "WriteNop"
-            ]
+            "ResourceGroup": "WriteNop"
         },
         {
             "Instruction": "EH_RESTORE",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "EH_RETURN",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "EH_RETURN64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "EH_SjLj_LongJmp32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "EH_SjLj_LongJmp64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "EH_SjLj_SetJmp32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "EH_SjLj_SetJmp64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "EH_SjLj_Setup",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "ENCLS",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "ENCLU",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "ENTER",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "ES_PREFIX",
-            "ResourceGroup": [
-                "WriteNop"
-            ]
+            "ResourceGroup": "WriteNop"
         },
         {
             "Instruction": "EXTRQ",
-            "ResourceGroup": [
-                "WriteVecALU"
-            ]
+            "ResourceGroup": "WriteVecALU"
         },
         {
             "Instruction": "EXTRQI",
-            "ResourceGroup": [
-                "WriteVecALU"
-            ]
+            "ResourceGroup": "WriteVecALU"
         },
         {
             "Instruction": "F2XM1",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FARCALL16i",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "FARCALL16m",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "FARCALL32i",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "FARCALL32m",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "FARJMP16i",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "FARJMP16m",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "FARJMP32i",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "FARJMP32m",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "FBLDm",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FCOMPP",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FLDL2E",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FLDL2T",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FLDLG2",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FLDLN2",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FLDPI",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FPATAN",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FPREM",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FPREM1",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FPTAN",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FRNDINT",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FRSTORm",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FSAVEm",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FSCALE",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FSINCOS",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FS_PREFIX",
-            "ResourceGroup": [
-                "WriteNop"
-            ]
+            "ResourceGroup": "WriteNop"
         },
         {
             "Instruction": "FXAM",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FXSAVE",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FXSAVE64",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FXTRACT",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FYL2X",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FYL2XP1",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "FsFLD0SD",
-            "ResourceGroup": [
-                "WriteZero"
-            ]
+            "ResourceGroup": "WriteZero"
         },
         {
             "Instruction": "FsFLD0SS",
-            "ResourceGroup": [
-                "WriteZero"
-            ]
+            "ResourceGroup": "WriteZero"
         },
         {
             "Instruction": "GETSEC",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "GS_PREFIX",
-            "ResourceGroup": [
-                "WriteNop"
-            ]
+            "ResourceGroup": "WriteNop"
         },
         {
             "Instruction": "HLT",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "IDIV8r",
-            "ResourceGroup": [
-                "WriteIDiv"
-            ]
+            "ResourceGroup": "WriteIDiv"
         },
         {
             "Instruction": "IMUL16m",
-            "ResourceGroup": [
-                "WriteIMulLd"
-            ]
+            "ResourceGroup": "WriteIMulLd"
         },
         {
             "Instruction": "IMUL16r",
-            "ResourceGroup": [
-                "WriteIMul"
-            ]
+            "ResourceGroup": "WriteIMul"
         },
         {
             "Instruction": "IMUL16rm",
-            "ResourceGroup": [
-                "WriteIMulLd"
-            ]
+            "ResourceGroup": "WriteIMulLd"
         },
         {
             "Instruction": "IMUL16rmi",
-            "ResourceGroup": [
-                "WriteIMulLd"
-            ]
+            "ResourceGroup": "WriteIMulLd"
         },
         {
             "Instruction": "IMUL16rmi8",
-            "ResourceGroup": [
-                "WriteIMulLd"
-            ]
+            "ResourceGroup": "WriteIMulLd"
         },
         {
             "Instruction": "IMUL16rr",
-            "ResourceGroup": [
-                "WriteIMul"
-            ]
+            "ResourceGroup": "WriteIMul"
         },
         {
             "Instruction": "IMUL16rri",
-            "ResourceGroup": [
-                "WriteIMul"
-            ]
+            "ResourceGroup": "WriteIMul"
         },
         {
             "Instruction": "IMUL16rri8",
-            "ResourceGroup": [
-                "WriteIMul"
-            ]
+            "ResourceGroup": "WriteIMul"
         },
         {
             "Instruction": "IMUL32m",
-            "ResourceGroup": [
-                "WriteIMulLd"
-            ]
+            "ResourceGroup": "WriteIMulLd"
         },
         {
             "Instruction": "IMUL32rmi",
-            "ResourceGroup": [
-                "WriteIMulLd"
-            ]
+            "ResourceGroup": "WriteIMulLd"
         },
         {
             "Instruction": "IMUL32rr",
-            "ResourceGroup": [
-                "WriteIMul"
-            ]
+            "ResourceGroup": "WriteIMul"
         },
         {
             "Instruction": "IMUL32rri",
-            "ResourceGroup": [
-                "WriteIMul"
-            ]
+            "ResourceGroup": "WriteIMul"
         },
         {
             "Instruction": "IMUL32rri8",
-            "ResourceGroup": [
-                "WriteIMul"
-            ]
+            "ResourceGroup": "WriteIMul"
         },
         {
             "Instruction": "IMUL64rmi32",
-            "ResourceGroup": [
-                "WriteIMulLd"
-            ]
+            "ResourceGroup": "WriteIMulLd"
         },
         {
             "Instruction": "IMUL64rri32",
-            "ResourceGroup": [
-                "WriteIMul"
-            ]
+            "ResourceGroup": "WriteIMul"
         },
         {
             "Instruction": "INC16r_alt",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "INC32r_alt",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "INSERTQ",
-            "ResourceGroup": [
-                "WriteVecALU"
-            ]
+            "ResourceGroup": "WriteVecALU"
         },
         {
             "Instruction": "INSERTQI",
-            "ResourceGroup": [
-                "WriteVecALU"
-            ]
+            "ResourceGroup": "WriteVecALU"
         },
         {
             "Instruction": "INT",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "INT3",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "INTO",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "INVD",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "INVEPT32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "INVEPT64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "INVLPG",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "INVLPGA32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "INVLPGA64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "INVPCID32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "INVPCID64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "INVVPID32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "INVVPID64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "IRET",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "IRET16",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "IRET32",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "IRET64",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "Int_COMISDrm",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "Int_COMISDrr",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "Int_COMISSrm",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "Int_COMISSrr",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "Int_MemBarrier",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "Int_UCOMISDrm",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "Int_UCOMISDrr",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "Int_UCOMISSrm",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "Int_UCOMISSrr",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "Int_VCOMISDrm",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "Int_VCOMISDrr",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "Int_VCOMISSrm",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "Int_VCOMISSrr",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "Int_VUCOMISDrm",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "Int_VUCOMISDrr",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "Int_VUCOMISSrm",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "Int_VUCOMISSrr",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "JAE_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JA_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JBE_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JB_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JCXZ",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JECXZ",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JE_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JGE_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JG_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JLE_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JL_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JMP_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JNE_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JNO_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JNP_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JNS_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JO_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JP_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "JS_2",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "LCMPXCHG16",
@@ -15628,129 +15088,87 @@
         },
         {
             "Instruction": "LDS16rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LDS32rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LEAVE",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "LES16rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LES32rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LFS16rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LFS32rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LFS64rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LGDT16m",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LGDT32m",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LGDT64m",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LGS16rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LGS32rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LGS64rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LIDT16m",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LIDT32m",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LIDT64m",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LLDT16m",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LLDT16r",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LMSW16m",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LMSW16r",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LOCK_ADD16mi",
@@ -15918,9 +15336,7 @@
         },
         {
             "Instruction": "LOCK_PREFIX",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "LOCK_SUB16mi",
@@ -16012,105 +15428,71 @@
         },
         {
             "Instruction": "LODSB",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "LODSL",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "LODSQ",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "LODSW",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "LRETIL",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "LRETIQ",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "LRETIW",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "LRETL",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "LRETW",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "LSL16rr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LSL32rr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LSL64rr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LSS16rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LSS32rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LSS64rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LTRm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LTRr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "LXADD16",
@@ -16130,447 +15512,299 @@
         },
         {
             "Instruction": "MASKMOVDQU",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "MASKMOVDQU64",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "MAXSDrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "MAXSDrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "MAXSSrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "MAXSSrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "MINSDrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "MINSDrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "MINSSrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "MINSSrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "MONITOR",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "MONITORXrrr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "MONITORrrr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "MONTMUL",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "MORESTACK_RET",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "MORESTACK_RET_RESTORE_R10",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "MOV16ao16",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV16ao32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV16mi",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "MOV16o16a",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV16o32a",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV16ri",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "MOV16ri_alt",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "MOV32ao16",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV32ao32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV32mi",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "MOV32o16a",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV32o32a",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV32r0",
-            "ResourceGroup": [
-                "WriteZero"
-            ]
+            "ResourceGroup": "WriteZero"
         },
         {
             "Instruction": "MOV32r1",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV32r_1",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV32ri",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "MOV32ri64",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV32ri_alt",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "MOV64ao32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV64mi32",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "MOV64o32a",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV64ri",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "MOV64ri32",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "MOV64toSDrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "MOV64toSDrr",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "MOV8ao16",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV8ao32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV8mr_NOREX",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "MOV8o16a",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV8o32a",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOV8rm_NOREX",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "MOV8rr_NOREX",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "MOVDI2SSrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "MOVDI2SSrr",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "MOVNTSD",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "MOVNTSS",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "MOVPC32r",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "MOVSB",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "MOVSDto64mr",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "MOVSDto64rr",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "MOVSL",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "MOVSQ",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "MOVSS2DImr",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "MOVSS2DIrr",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "MOVSW",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "MOVSX32_NOREXrm8",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "MOVSX32_NOREXrr8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MOVZPQILo2PQIrr",
-            "ResourceGroup": [
-                "WriteVecLogic"
-            ]
+            "ResourceGroup": "WriteVecLogic"
         },
         {
             "Instruction": "MOVZX32_NOREXrm8",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "MOVZX32_NOREXrr8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "MUL16r",
-            "ResourceGroup": [
-                "WriteIMul"
-            ]
+            "ResourceGroup": "WriteIMul"
         },
         {
             "Instruction": "MULSDrm_Int",
-            "ResourceGroup": [
-                "WriteFMulLd"
-            ]
+            "ResourceGroup": "WriteFMulLd"
         },
         {
             "Instruction": "MULSDrr_Int",
-            "ResourceGroup": [
-                "WriteFMul"
-            ]
+            "ResourceGroup": "WriteFMul"
         },
         {
             "Instruction": "MULSSrm_Int",
-            "ResourceGroup": [
-                "WriteFMulLd"
-            ]
+            "ResourceGroup": "WriteFMulLd"
         },
         {
             "Instruction": "MULSSrr_Int",
-            "ResourceGroup": [
-                "WriteFMul"
-            ]
+            "ResourceGroup": "WriteFMul"
         },
         {
             "Instruction": "NOOPL",
-            "ResourceGroup": [
-                "WriteZero"
-            ]
+            "ResourceGroup": "WriteZero"
         },
         {
             "Instruction": "NOOPW",
-            "ResourceGroup": [
-                "WriteZero"
-            ]
+            "ResourceGroup": "WriteZero"
         },
         {
             "Instruction": "OR16i16",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "OR16mi8",
@@ -16578,15 +15812,11 @@
         },
         {
             "Instruction": "OR16ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "OR32i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "OR32mi8",
@@ -16598,15 +15828,11 @@
         },
         {
             "Instruction": "OR32ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "OR64i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "OR64mi32",
@@ -16618,15 +15844,11 @@
         },
         {
             "Instruction": "OR64ri32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "OR64ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "OR8mi8",
@@ -16634,795 +15856,531 @@
         },
         {
             "Instruction": "OR8ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "OUTSB",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "OUTSL",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "OUTSW",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "POPA16",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "POPA32",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "POPDS16",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "POPDS32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "POPES16",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "POPES32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "POPF16",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "POPF32",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "POPF64",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "POPFS16",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "POPFS32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "POPFS64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "POPGS16",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "POPGS32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "POPGS64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "POPSS16",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "POPSS32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PREFETCH",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "PREFETCHW",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "PUSH16i8",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "PUSH32i8",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "PUSH64i32",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "PUSHA16",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "PUSHA32",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "PUSHCS16",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHCS32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHDS16",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHDS32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHES16",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHES32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHF32",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "PUSHFS16",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHFS32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHFS64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHGS16",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHGS32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHGS64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHSS16",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHSS32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "PUSHi16",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "PUSHi32",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "RCPSSm_Int",
-            "ResourceGroup": [
-                "WriteFRcpLd"
-            ]
+            "ResourceGroup": "WriteFRcpLd"
         },
         {
             "Instruction": "RCPSSr_Int",
-            "ResourceGroup": [
-                "WriteFRcpLd"
-            ]
+            "ResourceGroup": "WriteFRcpLd"
         },
         {
             "Instruction": "RDFLAGS32",
-            "ResourceGroup": [
-                "WriteRMW"
-            ]
+            "ResourceGroup": "WriteRMW"
         },
         {
             "Instruction": "RDFLAGS64",
-            "ResourceGroup": [
-                "WriteRMW"
-            ]
+            "ResourceGroup": "WriteRMW"
         },
         {
             "Instruction": "RDFSBASE",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RDFSBASE64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RDGSBASE",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RDGSBASE64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RDMSR",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RDPKRUr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RDPMC",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RDRAND16r",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RDRAND32r",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RDRAND64r",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RDSEED16r",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RDSEED32r",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RDSEED64r",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RELEASE_ADD32mi",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_ADD32mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_ADD64mi32",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_ADD64mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_ADD8mi",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_ADD8mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_AND32mi",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_AND32mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_AND64mi32",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_AND64mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_AND8mi",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_AND8mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_DEC16m",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_DEC32m",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_DEC64m",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_DEC8m",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_FADD32mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_FADD64mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_INC16m",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_INC32m",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_INC64m",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_INC8m",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_MOV16mi",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_MOV16mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_MOV32mi",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_MOV32mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_MOV64mi32",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_MOV64mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_MOV8mi",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_MOV8mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_OR32mi",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_OR32mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_OR64mi32",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_OR64mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_OR8mi",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_OR8mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_XOR32mi",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_XOR32mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_XOR64mi32",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_XOR64mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_XOR8mi",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RELEASE_XOR8mr",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REPNE_PREFIX",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_MOVSB_32",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_MOVSB_64",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_MOVSD_32",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_MOVSD_64",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_MOVSQ_64",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_MOVSW_32",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_MOVSW_64",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_PREFIX",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_STOSB_32",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_STOSB_64",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_STOSD_32",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_STOSD_64",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_STOSQ_64",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_STOSW_32",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "REP_STOSW_64",
-            "ResourceGroup": [
-                "WriteMicrocoded"
-            ]
+            "ResourceGroup": "WriteMicrocoded"
         },
         {
             "Instruction": "RETIL",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "RETIQ",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "RETIW",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "RETL",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "RETW",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "REX64_PREFIX",
-            "ResourceGroup": [
-                "WriteNop"
-            ]
+            "ResourceGroup": "WriteNop"
         },
         {
             "Instruction": "ROUNDSDr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "ROUNDSSr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "RSM",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "RSQRTSSm_Int",
-            "ResourceGroup": [
-                "WriteFRsqrtLd"
-            ]
+            "ResourceGroup": "WriteFRsqrtLd"
         },
         {
             "Instruction": "RSQRTSSr_Int",
-            "ResourceGroup": [
-                "WriteFRsqrtLd"
-            ]
+            "ResourceGroup": "WriteFRsqrtLd"
         },
         {
             "Instruction": "SBB16i16",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SBB16mi8",
@@ -17430,15 +16388,11 @@
         },
         {
             "Instruction": "SBB16ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SBB32i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SBB32mi8",
@@ -17446,15 +16400,11 @@
         },
         {
             "Instruction": "SBB32ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SBB64i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SBB64mi32",
@@ -17466,15 +16416,11 @@
         },
         {
             "Instruction": "SBB64ri32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SBB64ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SBB8mi8",
@@ -17482,279 +16428,187 @@
         },
         {
             "Instruction": "SBB8ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SEG_ALLOCA_32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SEG_ALLOCA_64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SEH_EndPrologue",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SEH_Epilogue",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SEH_PushFrame",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SEH_PushReg",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SEH_SaveReg",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SEH_SaveXMM",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SEH_SetFrame",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SEH_StackAlloc",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SETB_C16r",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SETB_C32r",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SETB_C64r",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SETB_C8r",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SGDT16m",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SGDT32m",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SHA1MSG1rm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "SHA1MSG1rr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "SHA1MSG2rm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "SHA1MSG2rr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "SHA1NEXTErm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "SHA1NEXTErr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "SHA1RNDS4rmi",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "SHA1RNDS4rri",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "SHA256MSG1rm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "SHA256MSG1rr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "SHA256MSG2rm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "SHA256MSG2rr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "SHA256RNDS2rm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "SHA256RNDS2rr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "SIDT16m",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SIDT32m",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SKINIT",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SLDT16m",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SMSW16r",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SMSW32r",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SMSW64r",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SQRTSDm_Int",
-            "ResourceGroup": [
-                "WriteFSqrtLd"
-            ]
+            "ResourceGroup": "WriteFSqrtLd"
         },
         {
             "Instruction": "SQRTSDr_Int",
-            "ResourceGroup": [
-                "WriteFSqrtLd"
-            ]
+            "ResourceGroup": "WriteFSqrtLd"
         },
         {
             "Instruction": "SQRTSSm_Int",
-            "ResourceGroup": [
-                "WriteFSqrtLd"
-            ]
+            "ResourceGroup": "WriteFSqrtLd"
         },
         {
             "Instruction": "SQRTSSr_Int",
-            "ResourceGroup": [
-                "WriteFSqrtLd"
-            ]
+            "ResourceGroup": "WriteFSqrtLd"
         },
         {
             "Instruction": "SS_PREFIX",
-            "ResourceGroup": [
-                "WriteNop"
-            ]
+            "ResourceGroup": "WriteNop"
         },
         {
             "Instruction": "STGI",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "STI",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SUB16i16",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SUB16mi8",
@@ -17762,15 +16616,11 @@
         },
         {
             "Instruction": "SUB16ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SUB32i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SUB32mi8",
@@ -17778,15 +16628,11 @@
         },
         {
             "Instruction": "SUB32ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SUB64i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SUB64mi32",
@@ -17798,15 +16644,11 @@
         },
         {
             "Instruction": "SUB64ri32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SUB64ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SUB8mi8",
@@ -17814,183 +16656,123 @@
         },
         {
             "Instruction": "SUB8ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "SUBSDrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "SUBSDrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "SUBSSrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "SUBSSrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "SWAPGS",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SYSENTER",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SYSEXIT",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SYSEXIT64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SYSRET",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "SYSRET64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "T1MSKC32rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "T1MSKC32rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "T1MSKC64rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "T1MSKC64rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "TAILJMPd",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "TAILJMPd64",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "TAILJMPm",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "TAILJMPm64",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "TAILJMPm64_REX",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "TAILJMPr",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "TAILJMPr64",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "TAILJMPr64_REX",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "TCRETURNdi",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "TCRETURNdi64",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "TCRETURNmi",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "TCRETURNmi64",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "TCRETURNri",
-            "ResourceGroup": [
-                "WriteJumpLd"
-            ]
+            "ResourceGroup": "WriteJumpLd"
         },
         {
             "Instruction": "TCRETURNri64",
-            "ResourceGroup": [
-                "WriteJump"
-            ]
+            "ResourceGroup": "WriteJump"
         },
         {
             "Instruction": "TEST16i16",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "TEST16mi",
@@ -17998,15 +16780,11 @@
         },
         {
             "Instruction": "TEST16ri",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "TEST32i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "TEST32mi",
@@ -18014,15 +16792,11 @@
         },
         {
             "Instruction": "TEST32ri",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "TEST64i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "TEST64mi32",
@@ -18030,2451 +16804,1635 @@
         },
         {
             "Instruction": "TEST64ri32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "TEST8ri_NOREX",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "TLSCall_32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "TLSCall_64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "TRAP",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "TZMSK32rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "TZMSK32rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "TZMSK64rm",
-            "ResourceGroup": [
-                "WriteALULd"
-            ]
+            "ResourceGroup": "WriteALULd"
         },
         {
             "Instruction": "TZMSK64rr",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "UD2B",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VAARG_64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VADDSDrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VADDSDrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VADDSSrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VADDSSrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VASTART_SAVE_XMM_REGS",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VCMPPDYrmi_alt",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VCMPPDYrri_alt",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VCMPPDrmi_alt",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VCMPPDrri_alt",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VCMPPSYrmi_alt",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VCMPPSYrri_alt",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VCMPPSrmi_alt",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VCMPPSrri_alt",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VCMPSDrm_alt",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VCMPSDrr_alt",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VCMPSSrm_alt",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VCMPSSrr_alt",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VCVTPD2DQYrm",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTPD2PSYrm",
-            "ResourceGroup": [
-                "WriteCvtF2FLd"
-            ]
+            "ResourceGroup": "WriteCvtF2FLd"
         },
         {
             "Instruction": "VCVTSI2SDrm",
-            "ResourceGroup": [
-                "WriteCvtI2FLd"
-            ]
+            "ResourceGroup": "WriteCvtI2FLd"
         },
         {
             "Instruction": "VCVTSI2SSrm",
-            "ResourceGroup": [
-                "WriteCvtI2FLd"
-            ]
+            "ResourceGroup": "WriteCvtI2FLd"
         },
         {
             "Instruction": "VCVTTPD2DQYrm",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSD2SI64Zrm",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSD2SI64Zrm_Int",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSD2SIZrm",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSD2SIZrm_Int",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSD2USI64Zrm",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSD2USI64Zrm_Int",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSD2USIZrm",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSD2USIZrm_Int",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSS2SI64Zrm",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSS2SI64Zrm_Int",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSS2SIZrm",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSS2SIZrm_Int",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSS2USI64Zrm",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSS2USI64Zrm_Int",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSS2USIZrm",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VCVTTSS2USIZrm_Int",
-            "ResourceGroup": [
-                "WriteCvtF2ILd"
-            ]
+            "ResourceGroup": "WriteCvtF2ILd"
         },
         {
             "Instruction": "VDIVSDrm_Int",
-            "ResourceGroup": [
-                "WriteFDivLd"
-            ]
+            "ResourceGroup": "WriteFDivLd"
         },
         {
             "Instruction": "VDIVSDrr_Int",
-            "ResourceGroup": [
-                "WriteFDiv"
-            ]
+            "ResourceGroup": "WriteFDiv"
         },
         {
             "Instruction": "VDIVSSrm_Int",
-            "ResourceGroup": [
-                "WriteFDivLd"
-            ]
+            "ResourceGroup": "WriteFDivLd"
         },
         {
             "Instruction": "VDIVSSrr_Int",
-            "ResourceGroup": [
-                "WriteFDiv"
-            ]
+            "ResourceGroup": "WriteFDiv"
         },
         {
             "Instruction": "VERRm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VERRr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VERWm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VERWr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VFMADDPD4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDPD4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDPD4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMADDPD4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMADDPS4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDPS4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDPS4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMADDPS4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMADDSD4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDSD4mr_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDSD4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDSD4rm_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDSD4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMADDSD4rr_Int",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMADDSD4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMADDSS4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDSS4mr_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDSS4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDSS4rm_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDSS4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMADDSS4rr_Int",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMADDSS4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMADDSUBPD4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDSUBPD4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDSUBPD4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMADDSUBPD4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMADDSUBPS4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDSUBPS4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMADDSUBPS4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMADDSUBPS4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBADDPD4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBADDPD4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBADDPD4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBADDPD4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBADDPS4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBADDPS4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBADDPS4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBADDPS4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBPD4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBPD4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBPD4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBPD4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBPS4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBPS4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBPS4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBPS4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBSD4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBSD4mr_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBSD4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBSD4rm_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBSD4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBSD4rr_Int",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBSD4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBSS4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBSS4mr_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBSS4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBSS4rm_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFMSUBSS4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBSS4rr_Int",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFMSUBSS4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMADDPD4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMADDPD4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMADDPD4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMADDPD4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMADDPS4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMADDPS4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMADDPS4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMADDPS4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMADDSD4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMADDSD4mr_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMADDSD4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMADDSD4rm_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMADDSD4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMADDSD4rr_Int",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMADDSD4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMADDSS4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMADDSS4mr_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMADDSS4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMADDSS4rm_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMADDSS4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMADDSS4rr_Int",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMADDSS4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMSUBPD4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMSUBPD4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMSUBPD4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMSUBPD4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMSUBPS4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMSUBPS4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMSUBPS4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMSUBPS4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMSUBSD4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMSUBSD4mr_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMSUBSD4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMSUBSD4rm_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMSUBSD4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMSUBSD4rr_Int",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMSUBSD4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMSUBSS4mr",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMSUBSS4mr_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMSUBSS4rm",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMSUBSS4rm_Int",
-            "ResourceGroup": [
-                "WriteFMALd"
-            ]
+            "ResourceGroup": "WriteFMALd"
         },
         {
             "Instruction": "VFNMSUBSS4rr",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMSUBSS4rr_Int",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFNMSUBSS4rr_REV",
-            "ResourceGroup": [
-                "WriteFMA"
-            ]
+            "ResourceGroup": "WriteFMA"
         },
         {
             "Instruction": "VFRCZPDrm",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VFRCZPDrmY",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VFRCZPDrr",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VFRCZPDrrY",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VFRCZPSrm",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VFRCZPSrmY",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VFRCZPSrr",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VFRCZPSrrY",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VFRCZSDrm",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VFRCZSDrr",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VFRCZSSrm",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VFRCZSSrr",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VGATHERDPDYrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VGATHERDPDrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VGATHERDPSYrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VGATHERDPSrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VGATHERQPDYrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VGATHERQPDrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VGATHERQPSYrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VGATHERQPSrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VMASKMOVDQU64",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "VMAXSDrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VMAXSDrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VMAXSSrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VMAXSSrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VMCALL",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMFUNC",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMINSDrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VMINSDrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VMINSSrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VMINSSrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VMLAUNCH",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMLOAD32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMLOAD64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMMCALL",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMOV64toSDrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VMOV64toSDrr",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "VMOVDI2SSrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VMOVDI2SSrr",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "VMOVSDto64mr",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "VMOVSDto64rr",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "VMOVSS2DImr",
-            "ResourceGroup": [
-                "WriteStore"
-            ]
+            "ResourceGroup": "WriteStore"
         },
         {
             "Instruction": "VMOVSS2DIrr",
-            "ResourceGroup": [
-                "WriteMove"
-            ]
+            "ResourceGroup": "WriteMove"
         },
         {
             "Instruction": "VMPTRLDm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMREAD32rr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMREAD64rr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMRESUME",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMRUN32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMRUN64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMSAVE32",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMSAVE64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMULSDrm_Int",
-            "ResourceGroup": [
-                "WriteFMulLd"
-            ]
+            "ResourceGroup": "WriteFMulLd"
         },
         {
             "Instruction": "VMULSDrr_Int",
-            "ResourceGroup": [
-                "WriteFMul"
-            ]
+            "ResourceGroup": "WriteFMul"
         },
         {
             "Instruction": "VMULSSrm_Int",
-            "ResourceGroup": [
-                "WriteFMulLd"
-            ]
+            "ResourceGroup": "WriteFMulLd"
         },
         {
             "Instruction": "VMULSSrr_Int",
-            "ResourceGroup": [
-                "WriteFMul"
-            ]
+            "ResourceGroup": "WriteFMul"
         },
         {
             "Instruction": "VMWRITE32rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMWRITE32rr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMWRITE64rm",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMWRITE64rr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMXOFF",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VMXON",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "VPCOMBmi",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMBmi_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMBri",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMBri_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMDmi",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMDmi_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMDri",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMDri_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMQmi",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMQmi_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMQri",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMQri_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUBmi",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUBmi_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUBri",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUBri_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUDmi",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUDmi_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUDri",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUDri_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUQmi",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUQmi_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUQri",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUQri_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUWmi",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUWmi_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUWri",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMUWri_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMWmi",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMWmi_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMWri",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPCOMWri_alt",
-            "ResourceGroup": [
-                "WriteVecALULd"
-            ]
+            "ResourceGroup": "WriteVecALULd"
         },
         {
             "Instruction": "VPERMIL2PDmr",
-            "ResourceGroup": [
-                "WriteFShuffleLd"
-            ]
+            "ResourceGroup": "WriteFShuffleLd"
         },
         {
             "Instruction": "VPERMIL2PDrm",
-            "ResourceGroup": [
-                "WriteFShuffleLd"
-            ]
+            "ResourceGroup": "WriteFShuffleLd"
         },
         {
             "Instruction": "VPERMIL2PDrr",
-            "ResourceGroup": [
-                "WriteFShuffle"
-            ]
+            "ResourceGroup": "WriteFShuffle"
         },
         {
             "Instruction": "VPERMIL2PSmr",
-            "ResourceGroup": [
-                "WriteFShuffleLd"
-            ]
+            "ResourceGroup": "WriteFShuffleLd"
         },
         {
             "Instruction": "VPERMIL2PSrm",
-            "ResourceGroup": [
-                "WriteFShuffleLd"
-            ]
+            "ResourceGroup": "WriteFShuffleLd"
         },
         {
             "Instruction": "VPERMIL2PSrr",
-            "ResourceGroup": [
-                "WriteFShuffle"
-            ]
+            "ResourceGroup": "WriteFShuffle"
         },
         {
             "Instruction": "VPGATHERDDYrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VPGATHERDDrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VPGATHERDQYrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VPGATHERDQrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VPGATHERQDYrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VPGATHERQDrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VPGATHERQQYrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VPGATHERQQrm",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "VPHADDBDrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHADDBDrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHADDBQrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHADDBQrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHADDBWrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHADDBWrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHADDDQrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHADDDQrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHADDUBDrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHADDUBDrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHADDUBQrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHADDUBQrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHADDUBWrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHADDUBWrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHADDUDQrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHADDUDQrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHADDUWDrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHADDUWDrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHADDUWQrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHADDUWQrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHADDWDrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHADDWDrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHADDWQrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHADDWQrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHSUBBWrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHSUBBWrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHSUBDQrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHSUBDQrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPHSUBWDrm",
-            "ResourceGroup": [
-                "WritePHAddLd"
-            ]
+            "ResourceGroup": "WritePHAddLd"
         },
         {
             "Instruction": "VPHSUBWDrr",
-            "ResourceGroup": [
-                "WritePHAdd"
-            ]
+            "ResourceGroup": "WritePHAdd"
         },
         {
             "Instruction": "VPMACSDDrm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "VPMACSDDrr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "VPMACSDQHrm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "VPMACSDQHrr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "VPMACSDQLrm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "VPMACSDQLrr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "VPMACSSDDrm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "VPMACSSDDrr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "VPMACSSDQHrm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "VPMACSSDQHrr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "VPMACSSDQLrm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "VPMACSSDQLrr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "VPMACSSWDrm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "VPMACSSWDrr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "VPMACSSWWrm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "VPMACSSWWrr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "VPMACSWDrm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "VPMACSWDrr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "VPMACSWWrm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "VPMACSWWrr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "VPMADCSSWDrm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "VPMADCSSWDrr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "VPMADCSWDrm",
-            "ResourceGroup": [
-                "WriteVecIMulLd"
-            ]
+            "ResourceGroup": "WriteVecIMulLd"
         },
         {
             "Instruction": "VPMADCSWDrr",
-            "ResourceGroup": [
-                "WriteVecIMul"
-            ]
+            "ResourceGroup": "WriteVecIMul"
         },
         {
             "Instruction": "VPROTBmi",
-            "ResourceGroup": [
-                "WriteVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVecShiftLd"
         },
         {
             "Instruction": "VPROTBmr",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPROTBri",
-            "ResourceGroup": [
-                "WriteVecShift"
-            ]
+            "ResourceGroup": "WriteVecShift"
         },
         {
             "Instruction": "VPROTBrm",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPROTBrr",
-            "ResourceGroup": [
-                "WriteVarVecShift"
-            ]
+            "ResourceGroup": "WriteVarVecShift"
         },
         {
             "Instruction": "VPROTDmi",
-            "ResourceGroup": [
-                "WriteVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVecShiftLd"
         },
         {
             "Instruction": "VPROTDmr",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPROTDri",
-            "ResourceGroup": [
-                "WriteVecShift"
-            ]
+            "ResourceGroup": "WriteVecShift"
         },
         {
             "Instruction": "VPROTDrm",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPROTDrr",
-            "ResourceGroup": [
-                "WriteVarVecShift"
-            ]
+            "ResourceGroup": "WriteVarVecShift"
         },
         {
             "Instruction": "VPROTQmi",
-            "ResourceGroup": [
-                "WriteVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVecShiftLd"
         },
         {
             "Instruction": "VPROTQmr",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPROTQri",
-            "ResourceGroup": [
-                "WriteVecShift"
-            ]
+            "ResourceGroup": "WriteVecShift"
         },
         {
             "Instruction": "VPROTQrm",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPROTQrr",
-            "ResourceGroup": [
-                "WriteVarVecShift"
-            ]
+            "ResourceGroup": "WriteVarVecShift"
         },
         {
             "Instruction": "VPROTWmi",
-            "ResourceGroup": [
-                "WriteVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVecShiftLd"
         },
         {
             "Instruction": "VPROTWmr",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPROTWri",
-            "ResourceGroup": [
-                "WriteVecShift"
-            ]
+            "ResourceGroup": "WriteVecShift"
         },
         {
             "Instruction": "VPROTWrm",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPROTWrr",
-            "ResourceGroup": [
-                "WriteVarVecShift"
-            ]
+            "ResourceGroup": "WriteVarVecShift"
         },
         {
             "Instruction": "VPSHABmr",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHABrm",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHABrr",
-            "ResourceGroup": [
-                "WriteVarVecShift"
-            ]
+            "ResourceGroup": "WriteVarVecShift"
         },
         {
             "Instruction": "VPSHADmr",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHADrm",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHADrr",
-            "ResourceGroup": [
-                "WriteVarVecShift"
-            ]
+            "ResourceGroup": "WriteVarVecShift"
         },
         {
             "Instruction": "VPSHAQmr",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHAQrm",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHAQrr",
-            "ResourceGroup": [
-                "WriteVarVecShift"
-            ]
+            "ResourceGroup": "WriteVarVecShift"
         },
         {
             "Instruction": "VPSHAWmr",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHAWrm",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHAWrr",
-            "ResourceGroup": [
-                "WriteVarVecShift"
-            ]
+            "ResourceGroup": "WriteVarVecShift"
         },
         {
             "Instruction": "VPSHLBmr",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHLBrm",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHLBrr",
-            "ResourceGroup": [
-                "WriteVarVecShift"
-            ]
+            "ResourceGroup": "WriteVarVecShift"
         },
         {
             "Instruction": "VPSHLDmr",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHLDrm",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHLDrr",
-            "ResourceGroup": [
-                "WriteVarVecShift"
-            ]
+            "ResourceGroup": "WriteVarVecShift"
         },
         {
             "Instruction": "VPSHLQmr",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHLQrm",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHLQrr",
-            "ResourceGroup": [
-                "WriteVarVecShift"
-            ]
+            "ResourceGroup": "WriteVarVecShift"
         },
         {
             "Instruction": "VPSHLWmr",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHLWrm",
-            "ResourceGroup": [
-                "WriteVarVecShiftLd"
-            ]
+            "ResourceGroup": "WriteVarVecShiftLd"
         },
         {
             "Instruction": "VPSHLWrr",
-            "ResourceGroup": [
-                "WriteVarVecShift"
-            ]
+            "ResourceGroup": "WriteVarVecShift"
         },
         {
             "Instruction": "VRCPSSm_Int",
-            "ResourceGroup": [
-                "WriteFRcpLd"
-            ]
+            "ResourceGroup": "WriteFRcpLd"
         },
         {
             "Instruction": "VRCPSSr_Int",
-            "ResourceGroup": [
-                "WriteFRcpLd"
-            ]
+            "ResourceGroup": "WriteFRcpLd"
         },
         {
             "Instruction": "VROUNDSDr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VROUNDSSr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VRSQRTSSm_Int",
-            "ResourceGroup": [
-                "WriteFRsqrtLd"
-            ]
+            "ResourceGroup": "WriteFRsqrtLd"
         },
         {
             "Instruction": "VRSQRTSSr_Int",
-            "ResourceGroup": [
-                "WriteFRsqrtLd"
-            ]
+            "ResourceGroup": "WriteFRsqrtLd"
         },
         {
             "Instruction": "VSQRTSDm_Int",
-            "ResourceGroup": [
-                "WriteFSqrtLd"
-            ]
+            "ResourceGroup": "WriteFSqrtLd"
         },
         {
             "Instruction": "VSQRTSDr_Int",
-            "ResourceGroup": [
-                "WriteFSqrtLd"
-            ]
+            "ResourceGroup": "WriteFSqrtLd"
         },
         {
             "Instruction": "VSQRTSSm_Int",
-            "ResourceGroup": [
-                "WriteFSqrtLd"
-            ]
+            "ResourceGroup": "WriteFSqrtLd"
         },
         {
             "Instruction": "VSQRTSSr_Int",
-            "ResourceGroup": [
-                "WriteFSqrtLd"
-            ]
+            "ResourceGroup": "WriteFSqrtLd"
         },
         {
             "Instruction": "VSUBSDrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VSUBSDrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "VSUBSSrm_Int",
-            "ResourceGroup": [
-                "WriteFAddLd"
-            ]
+            "ResourceGroup": "WriteFAddLd"
         },
         {
             "Instruction": "VSUBSSrr_Int",
-            "ResourceGroup": [
-                "WriteFAdd"
-            ]
+            "ResourceGroup": "WriteFAdd"
         },
         {
             "Instruction": "V_SET0",
-            "ResourceGroup": [
-                "WriteZero"
-            ]
+            "ResourceGroup": "WriteZero"
         },
         {
             "Instruction": "V_SETALLONES",
-            "ResourceGroup": [
-                "WriteZero"
-            ]
+            "ResourceGroup": "WriteZero"
         },
         {
             "Instruction": "WBINVD",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "WRFLAGS32",
-            "ResourceGroup": [
-                "WriteRMW"
-            ]
+            "ResourceGroup": "WriteRMW"
         },
         {
             "Instruction": "WRFLAGS64",
-            "ResourceGroup": [
-                "WriteRMW"
-            ]
+            "ResourceGroup": "WriteRMW"
         },
         {
             "Instruction": "WRFSBASE",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "WRFSBASE64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "WRGSBASE",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "WRGSBASE64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "WRMSR",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "WRPKRUr",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XABORT",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XACQUIRE_PREFIX",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XBEGIN",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XBEGIN_2",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XBEGIN_4",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XCHG16ar",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "XCHG32ar",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "XCHG32ar64",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "XCHG64ar",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "XCRYPTCBC",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XCRYPTCFB",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XCRYPTCTR",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XCRYPTECB",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XCRYPTOFB",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XEND",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XLAT",
-            "ResourceGroup": [
-                "WriteLoad"
-            ]
+            "ResourceGroup": "WriteLoad"
         },
         {
             "Instruction": "XOR16i16",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "XOR16mi8",
@@ -20482,15 +18440,11 @@
         },
         {
             "Instruction": "XOR16ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "XOR32i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "XOR32mi8",
@@ -20498,15 +18452,11 @@
         },
         {
             "Instruction": "XOR32ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "XOR64i32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "XOR64mi32",
@@ -20518,15 +18468,11 @@
         },
         {
             "Instruction": "XOR64ri32",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "XOR64ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "XOR8mi8",
@@ -20534,87 +18480,59 @@
         },
         {
             "Instruction": "XOR8ri8",
-            "ResourceGroup": [
-                "WriteALU"
-            ]
+            "ResourceGroup": "WriteALU"
         },
         {
             "Instruction": "XRELEASE_PREFIX",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XRSTORS",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XRSTORS64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XSAVE",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XSAVEC",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XSAVEC64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XSAVEOPT64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XSAVES",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XSAVES64",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XSHA1",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XSHA256",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XSTORE",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         },
         {
             "Instruction": "XTEST",
-            "ResourceGroup": [
-                "WriteSystem"
-            ]
+            "ResourceGroup": "WriteSystem"
         }
     ],
     "UndefinedInstructions": [

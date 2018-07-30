@@ -63,6 +63,8 @@ def main():
             tempInstruction['ResourceGroup'] = "".join(tempInstruction['ResourceGroup'])
         #Instruction has a single defined resource group
         else:
+            # Transform from list to single element
+            tempInstruction['ResourceGroup'] = tempInstruction['ResourceGroup'][0]
             instruction = tempInstruction
 
     #Some instructions uses several resource-groups, so we create custom combined resourcegroups here.
