@@ -5,7 +5,7 @@ import yaml
 import re
 
 def main():
-    stream = open('input/skylake_formated_clean.yaml', 'r')
+    stream = open('input/skylake.yaml', 'r')
     data = yaml.safe_load(stream)
     
     #Prints
