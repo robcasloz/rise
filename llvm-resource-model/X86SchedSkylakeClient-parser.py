@@ -78,12 +78,12 @@ def main():
 
     definedResourceGroups.extend(combinedResourceGroups)
 
-    #Load instructions that have been manually mapped to resource groups
+    #Load instructions that have been manually mapped to resource groups in an external file
     customInstructions = getCustomInstructions()
     undefinedInstructions = schedRWMatchings['Unmatched'] + undefinedSchedRWGroup
     #Remove manually defined instructions from the list of undefined instructions
     for instruction in customInstructions:
-        undefinedInstructions[:] = [d for d in undefinedInstructions if d.get('Instruction') != instruction]
+        undefinedInstructions[:] = [d for d in undefinedInstructions if d.get('Instruction') != instruction['Instruction']]
     
     definedResourceGroups.extend(customInstructions)
 
