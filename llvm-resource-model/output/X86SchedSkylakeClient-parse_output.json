@@ -18540,13 +18540,7 @@
             "Instruction": "BUNDLE"
         },
         {
-            "Instruction": "CFI_INSTRUCTION"
-        },
-        {
             "Instruction": "CMOV_FR128"
-        },
-        {
-            "Instruction": "CMOV_FR32"
         },
         {
             "Instruction": "CMOV_FR64"
@@ -18556,9 +18550,6 @@
         },
         {
             "Instruction": "CMOV_GR32"
-        },
-        {
-            "Instruction": "CMOV_GR8"
         },
         {
             "Instruction": "CMOV_V2F64"
@@ -18577,9 +18568,6 @@
         },
         {
             "Instruction": "CMOV_V8F32"
-        },
-        {
-            "Instruction": "COPY"
         },
         {
             "Instruction": "COPY_TO_REGCLASS"
@@ -18684,12 +18672,6 @@
             "Instruction": "FvANDNPSrr"
         },
         {
-            "Instruction": "FvANDPDrm"
-        },
-        {
-            "Instruction": "FvANDPDrr"
-        },
-        {
             "Instruction": "FvANDPSrm"
         },
         {
@@ -18708,28 +18690,13 @@
             "Instruction": "FvORPSrr"
         },
         {
-            "Instruction": "FvXORPDrm"
-        },
-        {
-            "Instruction": "FvXORPDrr"
-        },
-        {
-            "Instruction": "FvXORPSrm"
-        },
-        {
             "Instruction": "FvXORPSrr"
         },
         {
             "Instruction": "GC_LABEL"
         },
         {
-            "Instruction": "IMPLICIT_DEF"
-        },
-        {
             "Instruction": "INLINEASM"
-        },
-        {
-            "Instruction": "INSERT_SUBREG"
         },
         {
             "Instruction": "Int_CMPSDrr"
@@ -18873,12 +18840,6 @@
             "Instruction": "KILL"
         },
         {
-            "Instruction": "LIFETIME_END"
-        },
-        {
-            "Instruction": "LIFETIME_START"
-        },
-        {
             "Instruction": "LOAD_STACK_GUARD"
         },
         {
@@ -18975,9 +18936,6 @@
             "Instruction": "PCOMMIT"
         },
         {
-            "Instruction": "PHI"
-        },
-        {
             "Instruction": "PMADDUBSWrm128"
         },
         {
@@ -19020,16 +18978,10 @@
             "Instruction": "STATEPOINT"
         },
         {
-            "Instruction": "SUBREG_TO_REG"
-        },
-        {
             "Instruction": "TAILJMPd64_REX"
         },
         {
             "Instruction": "TEST16rm"
-        },
-        {
-            "Instruction": "TEST32rm"
         },
         {
             "Instruction": "TEST64rm"
@@ -20025,12 +19977,6 @@
             "Instruction": "VFvANDPDYrr"
         },
         {
-            "Instruction": "VFvANDPDrm"
-        },
-        {
-            "Instruction": "VFvANDPDrr"
-        },
-        {
             "Instruction": "VFvANDPSYrm"
         },
         {
@@ -20073,19 +20019,10 @@
             "Instruction": "VFvXORPDYrr"
         },
         {
-            "Instruction": "VFvXORPDrm"
-        },
-        {
-            "Instruction": "VFvXORPDrr"
-        },
-        {
             "Instruction": "VFvXORPSYrm"
         },
         {
             "Instruction": "VFvXORPSYrr"
-        },
-        {
-            "Instruction": "VFvXORPSrm"
         },
         {
             "Instruction": "VFvXORPSrr"
