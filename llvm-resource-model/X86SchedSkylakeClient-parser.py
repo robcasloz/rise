@@ -85,12 +85,10 @@ def main():
     for instruction in customInstructions:
         undefinedInstructions[:] = [d for d in undefinedInstructions if d.get('Instruction') != instruction['Instruction']]
     
-    definedResourceGroups.extend(customInstructions)
-
     #Format the output and print json (indent=4 enables pretty print)
     output = {
             'ResourceGroups': definedResourceGroups,
-            'DefinedInstructions': matchings['Matched'] + schedRWMatchings['Matched'],
+            'DefinedInstructions': matchings['Matched'] + schedRWMatchings['Matched'] + customInstructions,
             'UndefinedInstructions': undefinedInstructions,
             }
     print(json.dumps(output, indent=4))
