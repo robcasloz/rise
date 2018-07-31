@@ -39,7 +39,7 @@ def main():
     matchings = regexMatching(unisonInstructions, llvmInstructions)
 
     #Open file that contains output from tablegen
-    instructionRWSchedGroupTuples = json.load(open('output/tablegen-instruction-parser_output.json'))
+    instructionRWSchedGroupTuples = json.load(open('output/tablegen-parser_output.json'))
     # Try and match all remaining instructions, that are not matched with any resource group, with what their schedRWGroups are defined as from the output of tablegen
     schedRWMatchings = getSchedRWMatchings(matchings['Unmatched'], instructionRWSchedGroupTuples)
         
