@@ -110,19 +110,19 @@ There are a two scripts that are automatically create the resource specification
 Currently, the information is extracted from LLVM 6.0.0
 The folder "llvm-resource-model" contains all the tools to pull the necessary information from LLVM's resource model (See "Resource model based on LLVM's resource model").
 
-### tablegen-instruction-parser.py
+### tablegen-parser.py
 Input: The output from llvms tablegen as stdin, tablegen should be invoked as 
 
 ``llvm-tblgen /.../llvm-6.0.0.src/lib/Target/X86/X86.td -InstrInfo -I /.../llvm-6.0.0.src/include -I /.../llvm-6.0.0.src/lib/Target/X86``
 
 With the correct given paths to the llvm 6.0.0 source code.
-Output: A list of all instructions with their respective defined "SchedRW" attribute. The SchedRW attribute is the same as which resource group the instruction uses.
+Output: A list of all instructions with their respective defined "SchedRW" attribute. The SchedRW attribute is the same as the resource group which the instruction uses. This can be a list of several resource groups, in which case they are combined to make a new resource group, which the instruction is mapped to. This can also be groups not defined for skylake in LLVM, in which case they are ignored.
 
 ### X86SchedSkylakeClient-parser.py
 Input: 
 
 * The file "X86SchedSkylakeClient.td" from the input-folder. 
-* The output of tablegen-instruction-parser.py, The file "tablegen-instruction-parser_output.td" from the input folder. This  file is the output file produce by tablegen-instruction-parser.py
+* The output of tablegen-parser.py, The file "tablegen-instruction-parser_output.td" from the input folder. This  file is the output file produce by tablegen-parser.py
 
 Output: See heading "X86SchedSkylakeClient-parse_ouput.json"
 
