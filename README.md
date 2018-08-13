@@ -85,7 +85,7 @@ The JSON is constructed as follows:
 	        {
 	            "Instruction": "ADC8i8",
 	            "ResourceGroup": "SKLWriteResGroup23",
-                    "ReadAdvance": "true"
+  	            "ReadAdvance": "true"
 	        }
 	    ],
 	    "UndefinedInstructions": [
@@ -98,15 +98,15 @@ The JSON is constructed as follows:
 
 
 * "ResourceGroups" holds a list of dictionaries, containing all the resource groups which are defined
-	* "Name" is a string of the llvm-corresponding name of the resource group.
-	* "Latency" is an integer representing the delay that the instruction generates in a dependency chain.
-	* "Resources" is a list of strings, representing what specific resources are used by an instruction.
-	* "ResourceCycles" is a list of integers where each integer represents for how many cycles a resource is kept by an instruction.
+    * "Name" is a string of the llvm-corresponding name of the resource group.
+    * "Latency" is an integer representing the delay that the instruction generates in a dependency chain.
+    * "Resources" is a list of strings, representing what specific resources are used by an instruction.
+    * "ResourceCycles" is a list of integers where each integer represents for how many cycles a resource is kept by an instruction.
 * "DefinedInstructions" holds a list of all the instructions which are mapped to a resource-group
-	* "Instruction" is a string which holds the name of a unique instruction
-	* "ResourceGroups" is a string which holds the name of a resource group. 
-        * "ReadAdvance" is a boolean which tells if the instruction needs to spend 5 cycles to load data before issuing the instruction. As explained in LLVM: "Loads are 5 cycles, so ReadAfterLd registers needn't be available until 5 cycles after the memory operand."
-        * "UndefinedInstructions" holds a list of all the instruction which are NOT currently mapped to any resource-group
+    * "Instruction" is a string which holds the name of a unique instruction
+    * "ResourceGroups" is a string which holds the name of a resource group. 
+    * "ReadAdvance" is a boolean which tells if the instruction needs to spend 5 cycles to load data before issuing the instruction. As explained in LLVM: "Loads are 5 cycles, so ReadAfterLd registers needn't be available until 5 cycles after the memory operand."
+* "UndefinedInstructions" holds a list of all the instruction which are NOT currently mapped to any resource-group
 
 
 ### Coverage
