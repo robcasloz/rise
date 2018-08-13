@@ -5,6 +5,19 @@ Work done by Jacob Kimblad during my time as a student intern on the Unison comp
 
 The work resulted in a complete resource model based on LLVM 6.0.0 and an incomplete resource model based on the works of Agner Fog.
 
+The Skylake microarchitecture
+-----------------------------
+Here follows a short introduction to the skylake microarchitecture as the resource model is based on its hardware.
+
+![Skylake resources](docs/skl_resources.png)
+
+It is important to note that instructions is split up into so called micro-operations inside the Instruction Decode Queue (IDQ), which can hold 64 micro-operations to be scheduled. Different micro-operations are issued to different ports in the processor in parallel. 
+
+The idea of a resource model is to model ports in the processor as resources that are used by micro-operations. For this information is needed about what micro-operations each instruction is broken down into, which ports these micro-operations are issued to, how long after the instruction has been issued its result is ready (latency), and how long after a micro-operation has been issued to a specific port, that port is ready for a new micro-operation (throughput).
+
+Some micro-operations can be issued to several different ports. For example, micro-operations that make use of an integer ALU can be issued to ports 0, 1, 5, and 6 since therer is a total of 4 integer ALU's spread across 4 different ports. This also means that four micro-operations using an ALU can be issued each cycle.
+
+
 Resource model based on LLVM 6.0.0
 ==================================
 This resource model is currently based on the llvm 6.0.0 resource model for the Intel Skylake processor (6th generation Intel).
@@ -16,7 +29,8 @@ Each instruction is mapped to a "ResourceGroup" which can be thought of as an it
 * ResourceCycles
 
 Latency defines the duration between issuing the instruction until when its results are ready for use. 
-Resources and ResourceCycles are lists of equal size, where Resources is a list of strings that defines resources, and ResourceCycles is a list of integers that define how many cycles each corresponding resource is used for.
+Resources and ResourceCycles are lists of equal length, where Resources is a list of strings that defines resources used by the instruction, and ResourceCycles is a list of integers that define how many cycles each corresponding resource is used for. Resources used by a single instruction are modeled in LLVM to be used in parallel (at the same time) even tough this may not be true at all times but additional details would probably need a lot of information about the hardware.
+LLVM defines so called resource groups, where several resources can be grouped together to one resource of a larger capacity. For example, since some micro-operations can be issued on any of the four ALU's in skylake (ports 0, 1, 5, 6), there is a resource group called SKLPort0156 which has a capacity of 4. Micro-operations issued to an ALU uses this resource, which guarantess that the micro-operation will get one of the resources in its group as long as there is at least one free ALU, but we can not guarantee which port the micro-operation will be sent to. This can lead to a bad assumption being made later that for example port 6 is free, but there is a micro-operation using its ALU.
 
 It is worth noting that LLVM gets ResourceCycles from how many µ-ops are issued onto each resource for the given instruction. This assumes that we can issue one µ-op into a given port (resource) each cycle, which in reality is not true. This is a flaw in the LLVM resource model and is most likely caused by the difficulties of getting more precise information about the x86-architecture.
 
@@ -33,7 +47,7 @@ Example:
 Maps all instructions matching the regular expression "ADD(16|32|64)ri" to the resource group SKLWriteResGroup10.
 
 ### Using TableGen
-The second is that LLVM's tablegen command can output information about all instructions defined for the x86 architecture. Part of this information is  a list of resource groups, which define what particular resource groups that instruction is part of. The reason for it being a list is that depending on what x86-architecture the code is being compiled for, different resource groups are used(for example, there is a difference between AMD and Intel architectures).
+The second is that LLVM's tablegen command can output information about all instructions defined for the x86 architecture. Part of this information is a list of resource groups, which define what particular resource groups that instruction is part of. The reason for it being a list is that depending on what x86-architecture the code is being compiled for, different resource groups are used(for example, there is a difference between AMD and Intel architectures). It is possible to assign all instructions covered by the first method this way as well, but the first method is used in LLVM to override this method in creating a more detailed model for sub-targets.
 Example:
 ADD16ri defines:
 
@@ -45,14 +59,6 @@ Where WriteALU is a resource group which has been parsed from "X86SchedSkylakeCl
 Since LLVM's resource model doesnt cover all of the instructions there might be a need to manually map certain instructions to resoure groups. This can be done in the file [/llvm-resource-model/input/manual_instruction_mapping.json](https://github.com/jkimblad/rise/blob/master/llvm-resource-model/input/manual_instruction_mapping.json). To add custom mappings, one can simply append a new defined dictionary object to the json list and reproduce the results by executing [/llvm-resource-model/X86SchedSkylakeClient-parser.py](https://github.com/jkimblad/rise/blob/master/llvm-resource-model/X86SchedSkylakeClient-parser.py).
 
  Currently there are about 20 customly mapped instructions that have been mapped by me as to cover all instructions from certain benchmarks given to me by Mats. The file 
-
-Additional LLVM resource modelling
-----------------------------------
-There is a resource defining for how long the load registers can be used before it needs to be available to receive the load after the original instruction was issued.
-
-	// Loads are 5 cycles, so ReadAfterLd registers needn't be available until 5
-	// cycles after the memory operand.
-	def : ReadAdvance<ReadAfterLd, 5>;
 
 
 Results
@@ -78,7 +84,8 @@ The JSON is constructed as follows:
 	    "DefinedInstructions": [
 	        {
 	            "Instruction": "ADC8i8",
-	            "ResourceGroup": "SKLWriteResGroup23"
+	            "ResourceGroup": "SKLWriteResGroup23",
+                    "ReadAdvance": "true"
 	        }
 	    ],
 	    "UndefinedInstructions": [
@@ -98,7 +105,8 @@ The JSON is constructed as follows:
 * "DefinedInstructions" holds a list of all the instructions which are mapped to a resource-group
 	* "Instruction" is a string which holds the name of a unique instruction
 	* "ResourceGroups" is a string which holds the name of a resource group. 
-* "UndefinedInstructions" holds a list of all the instruction which are NOT currently mapped to any resource-group
+        * "ReadAdvance" is a boolean which tells if the instruction needs to spend 5 cycles to load data before issuing the instruction. As explained in LLVM: "Loads are 5 cycles, so ReadAfterLd registers needn't be available until 5 cycles after the memory operand."
+        * "UndefinedInstructions" holds a list of all the instruction which are NOT currently mapped to any resource-group
 
 
 ### Coverage
