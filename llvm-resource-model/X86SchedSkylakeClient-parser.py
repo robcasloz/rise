@@ -39,9 +39,9 @@ def main():
     matchings = regexMatching(unisonInstructions, llvmInstructions)
 
     #Open file that contains output from tablegen
-    instructionRWSchedGroupTuples = json.load(open('output/tablegen-parser_output.json'))
+    tablegenOutput = json.load(open('output/tablegen-parser_output.json'))
     # Try and match all remaining instructions, that are not matched with any resource group, with what their schedRWGroups are defined as from the output of tablegen
-    schedRWMatchings = getSchedRWMatchings(matchings['Unmatched'], instructionRWSchedGroupTuples)
+    schedRWMatchings = getSchedRWMatchings(matchings['Unmatched'], tablegenOutput)
         
     #Save all defined resource groups
     resourceGroups = []
@@ -85,10 +85,18 @@ def main():
     for instruction in customInstructions:
         undefinedInstructions[:] = [d for d in undefinedInstructions if d.get('Instruction') != instruction['Instruction']]
     
+    # Check which instructions have defined ReadAfterLd, which means they have 5 cycles until the operand is fetched from memory and the instruction can actually be issued
+    definedInstructions = matchings['Matched'] + schedRWMatchings['Matched'] + customInstructions
+    for instruction in list(definedInstructions):
+        if checkReadAdvance(tablegenOutput, instruction['Instruction']):
+           instruction['ReadAdvance'] = True 
+        else:
+           instruction['ReadAdvance'] = False 
+
     #Format the output and print json (indent=4 enables pretty print)
     output = {
             'ResourceGroups': definedResourceGroups,
-            'DefinedInstructions': matchings['Matched'] + schedRWMatchings['Matched'] + customInstructions,
+            'DefinedInstructions': definedInstructions,
             'UndefinedInstructions': undefinedInstructions,
             }
     print(json.dumps(output, indent=4))
@@ -97,6 +105,46 @@ def main():
     # print("unmatched: " + str(len(output['UndefinedInstructions'])))
     # Uncomment to print number of instructions mapped to a resource group
     # print("matched: " + str(len(output['DefinedInstructions'])))
+
+# Check which instructions have defined ReadAfterLd, which means they have 5 cycles until the operand is fetched from memory and the instruction can actually be issued
+def checkReadAdvance(tablegenOutput, instruction):
+    match = list(filter(lambda schedRW : schedRW['Instruction'] == instruction, tablegenOutput))
+    resourceGroups = []
+    if match and match[0]['SchedRW'] != '?':
+        resourceGroups = match[0]['SchedRW'].strip("[").strip("]").replace(" ", "").split(",")
+
+    readAfterLdCount = 0
+    for resourceGroup in resourceGroups:
+        if resourceGroup == "ReadAfterLd":
+            readAfterLdCount += 1
+
+    if readAfterLdCount > 0:
+        return True
+    
+    return False
+
+#Get the SchedRW groups that belongs to each instruction passed as argument
+def getSchedRWMatchings(instructions, tablegenOutput):
+
+    matches = {
+            'Matched': [],
+            'Unmatched': []
+            }
+
+    for data in instructions:
+        instruction = data['Instruction']
+        match = list(filter(lambda schedRW : schedRW['Instruction'] == instruction, tablegenOutput))
+        if match and match[0]['SchedRW'] != '?':
+            matching = {
+                    'Instruction': instruction,
+                    'ResourceGroup': match[0]['SchedRW'].strip("[").strip("]").replace(" ", "").split(",")
+                    }
+            matches['Matched'].append(matching)
+
+        else:
+            matches['Unmatched'].append(data)
+
+    return matches
 
 #Some instructions does not have a given resourcegroup and have instead been manually mapped to a resource group, so we fetch them from that input file to include in the output
 def getCustomInstructions():
@@ -335,29 +383,6 @@ def isNumber(a):
         return True
     except ValueError:
         return False
-
-#Get the SchedRW groups that belongs to each instruction passed as argument
-def getSchedRWMatchings(instructions, instructionRWSchedGroupTuples):
-
-    matches = {
-            'Matched': [],
-            'Unmatched': []
-            }
-
-    for data in instructions:
-        instruction = data['Instruction']
-        match = list(filter(lambda schedRW : schedRW['Instruction'] == instruction, instructionRWSchedGroupTuples))
-        if match and match[0]['SchedRW'] != '?':
-            matching = {
-                    'Instruction': instruction,
-                    'ResourceGroup': match[0]['SchedRW'].strip("[").strip("]").replace(" ", "").split(",")
-                    }
-            matches['Matched'].append(matching)
-
-        else:
-            matches['Unmatched'].append(data)
-
-    return matches
 
 #Find out if there are any instructions not matched to the instructions defined in unison, this function is slow due to testing all combinations of both input lists, so alot of things are aimed at improving its speed
 def regexMatching (unisonInstructions, instructions):
